@@ -1,0 +1,32 @@
+
+## 🗃️ Saved Model
+
+Trained weights are saved to:
+
+```
+cats_vs_dogs_resnet18.pth
+```
+
+## 🛠️ Requirements
+
+* Python 3.x
+* torch
+* torchvision
+* matplotlib
+* pillow
+
+Install dependencies with:
+
+```bash
+pip install torch torchvision matplotlib pillow
+```
+
+## 🔍 Notes
+
+* Normalization stats (`mean`, `std`) were calculated from the dataset manually (see commented code in `main.ipynb`).
+* This project is intended for educational/demo purposes.
+
+## 📦 Acknowledgments
+
+* Dataset sourced from [Kaggle Dogs vs. Cats](https://www.kaggle.com/c/dogs-vs-cats).
+* Built using PyTorch and torchvision.

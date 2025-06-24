@@ -1,0 +1,16 @@
+
+## 🐔 Player Movement
+
+We put a lot of effort into making movement *feel right*:
+
+* Smooth spherical gravity ensures your chicken hugs the planet surface at all times.
+* Directional movement works even when the "up" vector changes — thanks to world space vector projection.
+* The chicken can sprint, turn sharply, and react naturally to terrain curvature.
+
+## 🛡️ Features
+
+* 🎒 Sack collection with animation and sound feedback.
+* 🪓 Barbarians with detection zones and chase logic.
+* 🌍 A planet-based level that feels immersive and continuous.
+* 🧭 Optional minimap and sack indicators to help navigate.
+* ✨ Visual particles and feedback systems in the works.

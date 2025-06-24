@@ -1,0 +1,13 @@
+## 🧩 Features
+
+- 👶 Kid-friendly interface and controls
+- 🔊 Audio feedback for correct/incorrect answers
+- 🖼️ Bright visuals and engaging images
+- 🏆 Progressive learning with levels and rewards
+
+## 🛠️ Tech Stack
+
+- **Engine:** Unity
+- **Language:** C#
+- **Platform:** Mobile (Android/iOS) and Desktop
+- **Target Audience:** Kids aged 3–7

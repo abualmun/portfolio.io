@@ -1,0 +1,4 @@
+
+### ⚙️ Scalable & Modular Architecture
+
+Structured using clean modular components (e.g., `analysis/`, `bot/`, `data/`, `services/`). Supports async operations, caching, multiple database engines, and includes automated testing & CI setup. Designed for extensibility and high performance.

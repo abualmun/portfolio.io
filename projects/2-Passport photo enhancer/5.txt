@@ -1,0 +1,16 @@
+## 🧠 Training Details
+
+- **Dataset:** [Flickr-Faces-HQ (FFHQ)](https://github.com/NVlabs/ffhq)
+  - 70,000 high-quality face images
+  - Preprocessed to simulate passport-like degradation (e.g., compression, resizing, blur)
+
+- **Training Platform:** Google Colab
+  - Used TPU/High-RAM runtime
+  - Mixed precision training with PyTorch + CUDA
+  - Custom augmentations and passport-style degradations applied on-the-fly
+
+- **Loss Functions:**
+  - Pixel Loss (L1)
+  - Perceptual Loss (VGG-based)
+  - Adversarial Loss (GAN Discriminator)
+  - Identity Loss (optional; based on ArcFace embeddings)

@@ -1,0 +1,8 @@
+# 🛠️🚀 Technical Achievement
+
+Built from scratch as a fully-optimized 3D endless runner 💻🏃‍♂️
+
+* 🌐 **Procedural obstacle generation** keeps the action fresh
+* 🎥 **Dynamic camera system** for cinematic chases
+* 🧠 **Advanced Shark AI** always keeps you on your fins
+* 🌊 **Custom physics + water FX** create a rich underwater vibe with smooth, responsive gameplay

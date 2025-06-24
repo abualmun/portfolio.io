@@ -1,0 +1,3 @@
+# 🛂 Passport Photo Enhancer with Real-ESRGAN
+
+This project fine-tunes the powerful [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) model to enhance **passport and ID-style facial images**, focusing on improving clarity and realism for low-quality or compressed photos.

@@ -1,0 +1,30 @@
+## 📁 Dataset
+
+- The dataset used is the **Dogs vs. Cats** dataset available on [Kaggle](https://www.kaggle.com/c/dogs-vs-cats/data).
+- Images are organized into subfolders under `./petImages/` for use with `torchvision.datasets.ImageFolder`.
+
+## 🧠 Model
+
+- Base architecture: **ResNet-18** pretrained on ImageNet.
+- Final fully connected layer adjusted to output 2 classes (Cat or Dog).
+- Training is done using **CrossEntropyLoss** and **Adam optimizer**.
+
+## 🏋️‍♂️ Training
+
+Training is done in `main.ipynb` using the following setup:
+
+- Images are resized to 224x224 and normalized.
+- 80% of the dataset is used for training, 20% for validation.
+- Batch size: 100
+- Number of epochs: 10
+
+After training, the model is evaluated for validation accuracy.
+
+## 🧪 Testing
+
+The `test.py` script takes an image path as an argument and outputs the prediction (Cat or Dog) along with a visual display.
+
+**Usage:**
+```bash
+python test.py path_to_image.jpg
+````

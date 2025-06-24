@@ -1,0 +1,18 @@
+
+## 🧠 Game Concept
+
+This game helps children:
+- Learn the alphabet 🅰️🅱️
+- Recognize and spell words 🧁🧀🍞
+- Build their vocabulary with visual aids 🖼️
+- Improve memory and word association
+
+## 🕹️ How to Play
+
+- Children are presented with colorful images of objects or food.
+- They must select the correct word that matches the image.
+- The game uses large buttons and simple UI for easy navigation.
+
+Example Activities:
+- Tap the correct name of a shown object (e.g., **bread**, **cheese**, **chicken**).
+- Progress through levels of increasing difficulty and vocabulary.

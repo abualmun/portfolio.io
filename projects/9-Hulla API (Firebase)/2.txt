@@ -1,0 +1,30 @@
+## 🚀 API Endpoints
+
+### 📝 Registration
+
+* `POST /abualmun/register/teachers`
+* `POST /abualmun/register/students`
+
+### 🔐 Login
+
+* `POST /login/teachers`
+* `POST /login/students`
+
+### 📊 Records
+
+* `POST /records` – Filter records by user/date
+* `POST /records/add` – Add new record
+* `POST /records/edit` – Update a record
+* `POST /records/delete` – Delete a record
+
+---
+
+## 🧪 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start the server
+node -r esm index.js
+```

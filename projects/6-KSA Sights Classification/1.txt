@@ -1,0 +1,2 @@
+**🧠 AI Landmark Classifier (Back-End)**
+Developed a Flask-based API that classifies images of Saudi landmarks using a fine-tuned ResNet18 deep learning model. The model identifies 14 culturally significant locations and returns their names, confidence scores, and historical descriptions for tourists. It supports base64 image input and was deployed with full CORS support for frontend integration.

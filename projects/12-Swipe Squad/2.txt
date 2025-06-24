@@ -1,0 +1,2 @@
+**Tech Stack:**
+Developed in **Unity** with C# scripting and optimized for **1920x1080 portrait resolution**. Emphasis on performance, smooth animations, and visually engaging UI.

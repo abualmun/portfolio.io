@@ -1,0 +1,23 @@
+🫀 **Your Mission**:  
+Synchronize your chest compressions (by tapping the screen) with the beat to **perform CPR correctly** and **rescue the patient**!
+
+---
+
+## 🧠 Features
+
+- 🔍 **Real-world interaction** via AR
+- 🎵 **Timed CPR beat** based on medical guidelines
+- 🖱️ **Tap to compress** rhythm gameplay
+- 🎯 Feedback on compression accuracy
+- 📚 Educational goal: Teach CPR in a fun and memorable way
+
+---
+
+## 🛠️ Tech Stack
+
+- 🎮 **Unity Engine**
+- 📱 **AR Foundation**
+- 🌍 **ARKit / ARCore** support
+- 🎵 **Custom audio beat sync system**
+
+---

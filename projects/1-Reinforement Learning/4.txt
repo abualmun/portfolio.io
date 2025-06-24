@@ -1,0 +1,14 @@
+### 💡 Why RoboFly?
+
+- Simple scoring system makes performance easy to measure.
+- Game authored by @AhmedElnour123, meaning clean and modifiable code 💪.
+- Lightweight game logic — perfect for fast training and testing loops.
+
+### 🔄 Agent Workflow
+
+1. 🔌 **Integration**: Used **socket communication** to connect a `TensorFlow` model in Python with a real-time scene in the **Godot 4.2** engine.
+2. 🕹️ **Control loop**:
+   - Python sends an action (e.g., flap or don't).
+   - Godot executes the action and returns updated game state.
+   - Agent receives rewards (surviving, scoring) or punishments (crashing).
+3. ♻️ Repeat millions of times — all inside a real game, not a mock simulation.

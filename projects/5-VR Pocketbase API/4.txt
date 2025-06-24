@@ -1,0 +1,30 @@
+
+## 🔄 Device Linking Flow
+
+1. Client requests a new device → generates a **6-digit code**
+2. Code stored temporarily in `unconnected_devices`
+3. VR device sends code + serial number to `/devices/connect`
+4. Server verifies and registers the device in `devices` 🚀
+
+> ✅ **Collision Avoidance:** Auto-increments if code already exists!
+
+---
+
+## 🕹️ Session Management Flow
+
+- Client starts a session → writes to `running_scenarios`
+- Device polls `/devices/start_game` to check for updates
+- Decoupled, queue-like architecture for reliable sync 📡
+
+---
+
+## 📋 Audit Logging
+
+Every API call (success or fail) is logged in `actions_log` with:
+- Client ID
+- User ID
+- Device ID
+- Scenario ID
+- Action type
+- Success status
+- Error message (if any)

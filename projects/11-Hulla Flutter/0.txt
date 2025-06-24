@@ -1,0 +1,9 @@
+# 📖 Hulla (حُـلَّـة)
+
+🌟 *A modern solution to organize and track Quran memorization for students and teachers.*
+
+---
+
+## ✨ About The Project
+
+Keeping track of Quran memorization progress in a college environment can be overwhelming 📚. Traditional methods like papers and spreadsheets are inefficient and error-prone 🧾❌. **Hulla** was created to solve this challenge by offering a digital, user-friendly experience.

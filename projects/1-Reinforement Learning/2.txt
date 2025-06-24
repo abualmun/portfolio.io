@@ -1,0 +1,8 @@
+## 🎯 Goal
+
+Train an RL agent to play RoboFly, improving performance through trial and error inside a real game engine — **not just a simulated environment**.
+
+## 🧠 Reinforcement Learning Approach
+
+After diving into RL, I was fascinated by the core idea:
+> Let a model learn *by itself* through **rewards and punishments** in a simulated environment.

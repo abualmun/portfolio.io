@@ -1,0 +1,3 @@
+# 🤖 RoboFly: Reinforcement Learning Agent for Flappy Bird Clone 🪰
+
+Welcome to **RoboFly** – my first hands-on Reinforcement Learning project after completing the Stanford Machine Learning Specialization on Coursera 🎓. I was inspired to immediately apply what I learned, and this fun (yet frustrating 😅) Flappy Bird-style game provided the perfect testbed!

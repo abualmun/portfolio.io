@@ -1,0 +1,12 @@
+### Crowd Runner Game – Level-Based Casual Mobile Game
+
+**Overview:**
+A fast-paced, level-based casual game where players control and grow a crowd of units as they move through an urban environment. The goal is to strategically navigate the path, gather new allies, and defeat opposing crowds in head-on clashes.
+
+**Features:**
+
+* Crowd growth mechanics and real-time group combat.
+* Simple, intuitive controls for mass movement.
+* Dynamic enemy encounters with scaling difficulty.
+* Clean, stylized 3D visuals optimized for mobile.
+* Level progression with coin-based scoring and resource collection.

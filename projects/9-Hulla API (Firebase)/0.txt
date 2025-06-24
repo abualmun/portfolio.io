@@ -1,0 +1,32 @@
+# 🔥📚 Hulla Firebase API
+
+A fast, Firebase-powered backend built with **Express.js** and **Firestore**!
+🚀 Supports student & teacher registration, authentication, and Qur'an memorization records tracking — all in real-time!
+
+---
+
+## ⚙️ Tech Stack
+
+* 🧠 **Express.js** – Server-side framework
+* 🌐 **Firebase Firestore** – Cloud database
+* 🔐 **CORS** – Secure cross-origin access
+* 🧩 **ES Modules** – Clean modern syntax
+* 🌍 Deployed via **Node.js** + `Procfile`
+
+---
+
+## ✨ Key Features
+
+🔹 **👨‍🏫 Teacher & 👩‍🎓 Student Registration**
+Effortlessly register users to Firebase collections.
+
+🔹 **🔐 Login System**
+Secure login routes that fetch teacher or student data, with conditional access to student lists.
+
+🔹 **📅 Records Management**
+Full CRUD API for memorization records:
+
+* ➕ Add new records
+* 📝 Edit existing ones
+* ❌ Delete records
+* 🔍 Filter by date & username

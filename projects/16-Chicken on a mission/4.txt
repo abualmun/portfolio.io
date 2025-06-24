@@ -1,0 +1,13 @@
+
+## 🎮 Game Concept
+
+You're a determined chicken with one goal: collect all the sacks before the barbarians catch you. They're strong, fast, and relentless — but you're smarter, sneakier, and lighter on your claws.
+
+## 🧠 Vector-Based Movement
+
+The core of the game’s mechanics is built around **vector calculations**. Everything — from chasing, escaping, to collecting items — is done using custom vector math. Here are a few highlights:
+
+* 🧭 The chicken always orients to walk on a spherical terrain. Movement is handled with smooth vector-based rotation and orientation.
+* 🏃 The player's movement isn't just “left” and “right” — it's defined by movement **relative to the planet's surface**, ensuring the character stays grounded in all directions.
+* 📡 Enemies detect and pursue the player using `Vector3.MoveTowards` and awake based on a calculated radius.
+* 🧲 Collectables and enemies respond to dynamic vectors, adjusting behavior as the player moves across the globe.

@@ -1,0 +1,3 @@
+# 🎮 VR Training Platform Backend
+
+Welcome to the backend system powering a cutting-edge **VR Training Platform**! This service manages clients, VR devices, training sessions, and all associated data to deliver a seamless immersive experience.

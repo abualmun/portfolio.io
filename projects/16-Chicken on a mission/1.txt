@@ -1,0 +1,2 @@
+# 🐔 Chicken On A Mission
+**Sack Escape** is a fast-paced 3D game where you play as a brave chicken trying to collect scattered sacks while dodging dangerous barbarians. The game takes place on a spherical world, and the chase never stops!

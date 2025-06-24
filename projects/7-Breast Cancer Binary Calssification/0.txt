@@ -1,0 +1,54 @@
+# 🧠✨ Breast Cancer Classification using PyTorch
+
+A powerful deep learning model built with **PyTorch** to classify breast cancer cases using the **Wisconsin Breast Cancer** dataset 🎗️🔬
+✅ Achieves **98.25% accuracy** on the test set!
+
+---
+
+## 📋 Table of Contents
+
+* [📌 Overview](#-overview)
+* [⚙️ Requirements](#-requirements)
+* [📁 Project Structure](#-project-structure)
+* [💻 Installation](#-installation)
+* [🏗️ Model Architecture](#-model-architecture)
+* [🏃‍♀️ Training Process](#-training-process)
+* [📊 Results](#-results)
+
+---
+
+## 📌 Overview
+
+This project uses **PyTorch** to build a simple yet effective **neural network** that classifies breast cancer diagnoses 🩺🧬
+Trained on the Wisconsin dataset, the model features a **feedforward architecture** with one hidden layer — fast, efficient, and accurate!
+
+---
+
+## ⚙️ Requirements
+
+Make sure you have the following installed:
+
+* 🐍 Python 3.x
+* 🔥 PyTorch
+* 🖼️ torchvision
+* 📘 scikit-learn
+* ⚡ CUDA GPU (optional but recommended!)
+
+---
+
+## 📁 Project Structure
+
+🔍 Here's what the project includes:
+
+1. **🧹 Data Preprocessing**
+
+   * Load dataset, split (80-20), scale features, convert to tensors
+
+2. **🧠 Model Architecture**
+
+   * 30 input features → 128 neurons (ReLU) → 1 output (Sigmoid)
+
+3. **⚙️ Training Pipeline**
+
+   * Binary Cross-Entropy + Adam Optimizer
+   * Optional GPU acceleration 🚀

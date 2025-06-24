@@ -1,0 +1,2 @@
+**🧠 Game Mechanics with Visual Feedback**
+Each correct letter pours milk into a virtual glass, providing instant visual and sound feedback. The glass fills up with each correct guess, while incorrect answers trigger humorous cow sounds and sad animations, enhancing user interaction.

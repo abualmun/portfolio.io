@@ -1,0 +1,2 @@
+**📦 Full-Stack Deployment & Training Workflow**
+Organized a modular project structure with separate training, back-end, and front-end directories. Included scripts for error checking, thumbnail collection, and model training for both 5 and 14 classes. Designed for easy deployment and scalability using tools like Gunicorn and requirements management via `requirements.txt`.

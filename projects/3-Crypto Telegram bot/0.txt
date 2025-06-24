@@ -1,0 +1,4 @@
+
+### 📈 Technical Crypto Analyzer Bot
+
+A full-featured Telegram bot built with Python, enabling real-time technical analysis for cryptocurrencies. It supports RSI, MACD, Bollinger Bands, trend detection, and custom chart generation. Integrates with CoinGecko and CryptoCompare for live data and news sentiment analysis.

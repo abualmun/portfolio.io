@@ -1,0 +1,3 @@
+### 🌍 Multi-language, Educational, and Visual
+
+Provides crypto trading insights in both English and Arabic. Users can access interactive charts (via Plotly & mplfinance), trading strategies, and glossary terms—making it not just a tool but a learning companion for crypto enthusiasts.

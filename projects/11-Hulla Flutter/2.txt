@@ -1,0 +1,36 @@
+
+👨‍🏫 **Teachers** can:
+
+* View student history
+* Filter by date 🗓️
+* Add/edit/delete records
+
+🧑‍🎓 **Students** can:
+
+* Track their own progress
+* Stay motivated and organized 💪
+
+This app bridges the gap between spiritual growth and smart technology 💡🕌.
+
+---
+
+## 🚀 Features
+
+✅ Role-based views (Students 👨‍🎓 / Teachers 👩‍🏫)
+✅ Student selection dropdown 📋
+✅ Memorization record logging (Surah, Ayahs, Grade) 📖
+✅ Date range filtering for reports 🗂️
+✅ Full CRUD for memorization records ✍️
+✅ Cross-platform: Android 🤖, Web 🌐, Linux 🐧
+
+---
+
+## 🛠️ Built With
+
+* 🧩 **Flutter** – UI toolkit for multi-platform apps
+* 🧠 **Dart** – The language behind Flutter
+* 🔌 **http** – API integration
+* 📦 **flutter\_bloc** – State management
+* 🕰️ **intl** – Date formatting
+
+---

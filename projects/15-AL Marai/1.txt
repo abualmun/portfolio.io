@@ -1,0 +1,2 @@
+**🎮 Interactive Educational Game Design**
+Developed a digital "fill in the blanks" game inspired by Hangman to promote Almarai Fresh Milk. The game challenges users to guess a unified phrase, reinforcing healthy habits through playful engagement.

@@ -1,0 +1,9 @@
+# 🆘 AR CPR First Aid Game 🚑💓
+
+An **Augmented Reality (AR)** based Unity game designed to **teach and simulate CPR** (Cardiopulmonary Resuscitation) in an interactive and engaging way!
+
+---
+
+## 🎮 Game Overview
+
+In this game, players use their device's camera to scan their environment and **locate an injured person** through AR. Once found, a **CPR timing beat** starts to guide the player.

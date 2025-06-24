@@ -1,0 +1,45 @@
+
+## 🧠 Overview
+
+This backend uses a **two-tier architecture**:
+
+1. **🗄️ Core BaaS:** [PocketBase](https://pocketbase.io/) provides the database, real-time updates, file storage, and a REST API.
+2. **⚙️ Business Logic Layer:** A custom `Node.js + Express.js` API manages device linking, session flow, and data orchestration.
+
+---
+
+## ✨ Key Features
+
+- 🔐 **Client Authentication**  
+- 🎧 **VR Device Registration & Linking**  
+- 🧑‍🏫 **Training Session Management**  
+- 📊 **Performance Data Collection**  
+- 🧩 **Scenario Creation & Management**  
+- 🧾 **Action Logging for Audit Trails**
+
+---
+
+## 🛠️ Core Technologies
+
+| Tool            | Purpose                                           |
+|-----------------|---------------------------------------------------|
+| 💾 PocketBase   | Embedded database, WebSocket API, auth, storage   |
+| 🚀 Node.js      | Custom Express API for business logic             |
+| 🐳 Docker       | Containerized deployment                          |
+| ☁️ Fly.io       | Hosting using `fly.toml` config                   |
+| 📖 Swagger UI   | Interactive API docs via `swagger-jsdoc`          |
+| 🔄 Nodemon      | Hot reload during development                     |
+| 📦 Concurrently | Run both services together with ease              |
+
+---
+
+## 🗂️ Database Schema (PocketBase Collections)
+
+- **👤 clients:** Admin user auth (username, password, email)
+- **🔐 licenses:** Subscription tracking (seats_left per client)
+- **📱 unconnected_devices:** Temporary store for linking new devices
+- **🎧 devices:** Registered VR devices (serial number, status)
+- **🎯 scenarios:** Training scenario definitions (metrics & checklists)
+- **🎮 running_scenarios:** Active sessions & status queue
+- **📈 metrics / 🧾 checklist / ℹ️ additional_info:** Session data
+- **🧾 actions_log:** Auditable record of every significant action

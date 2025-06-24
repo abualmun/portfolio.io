@@ -1,0 +1,6 @@
+## 🔧 Known Issues (but they’re part of the charm!)
+
+* Moving directly across the planet may sometimes slow down due to the limitations of straight-line movement on curved space.
+* Win/Lose conditions are being refined for frame-accurate responsiveness.
+* Close encounters with enemies can feel abrupt (we're tuning the hit delay).
+

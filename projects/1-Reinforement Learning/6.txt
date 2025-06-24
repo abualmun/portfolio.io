@@ -1,0 +1,25 @@
+## ⚙️ Tools & Tech
+
+- 🧠 TensorFlow (Python) — RL logic and training.
+- 🕹️ Godot Engine 4.2 — real-time game environment.
+- 🔗 Socket server — communication between agent and game.
+- 🧪 Custom reward function — based on survival and score.
+
+## 📈 Training Journey
+
+- 🚀 Best score achieved by the trained agent: **266**
+- 🧪 One early training attempt failed after **11,000+ episodes** with zero progress 😂
+- 👨🏾‍🔬 Later iterations improved significantly, thanks to:
+  - Better model structure
+  - Smarter reward shaping
+  - More optimized state information exchange
+
+## 🤔 Lessons Learned
+
+- Game randomness might require longer training than expected 🎲
+- Socket latency could bottleneck real-time decision making 🐢
+- Model design has a major impact on learning capability 🧠
+
+## 🏁 Final Thoughts
+
+This project was a **huge motivational boost** for my AI journey. It was challenging but so rewarding to watch a self-taught agent slowly master a game I personally enjoy (and sometimes hate 🤣). More to come, inshallah! 🙏🏾

@@ -1,1483 +1,1498 @@
 <script>
-  projects_json = [
-    {
-      "id": 1,
-      "index": 1,
-      "title": "Reinforement Learning",
-      "category": "AI & Machine Learning",
-      "date": "5.7.2024",
-      "folder": "1-Reinforement Learning (0-5.7.2024)",
-      "files": [
+    projects_json = [
         {
-          "name": "0.txt",
-          "type": "text",
-          "content": "# 🤖 RoboFly: Reinforcement Learning Agent for Flappy Bird Clone 🪰\n\nWelcome to **RoboFly** – my first hands-on Reinforcement Learning project after completing the Stanford Machine Learning Specialization on Coursera 🎓. I was inspired to immediately apply what I learned, and this fun (yet frustrating 😅) Flappy Bird-style game provided the perfect testbed!"
+            "id": 1,
+            "index": 1,
+            "title": "Reinforement Learning",
+            "category": "AI & Machine Learning",
+            "date": "5.7.2024",
+            "folder": "1-Reinforement Learning (0-5.7.2024)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "# 🤖 RoboFly: Reinforcement Learning Agent for Flappy Bird Clone 🪰\n\nWelcome to **RoboFly** – my first hands-on Reinforcement Learning project after completing the Stanford Machine Learning Specialization on Coursera 🎓. I was inspired to immediately apply what I learned, and this fun (yet frustrating 😅) Flappy Bird-style game provided the perfect testbed!"
+                },
+                {
+                    "name": "1.jpeg",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "## 🎯 Goal\n\nTrain an RL agent to play RoboFly, improving performance through trial and error inside a real game engine — **not just a simulated environment**.\n\n## 🧠 Reinforcement Learning Approach\n\nAfter diving into RL, I was fascinated by the core idea:\n> Let a model learn *by itself* through **rewards and punishments** in a simulated environment."
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                },
+                {
+                    "name": "4.txt",
+                    "type": "text",
+                    "content": "### 💡 Why RoboFly?\n\n- Simple scoring system makes performance easy to measure.\n- Game authored by @AhmedElnour123, meaning clean and modifiable code 💪.\n- Lightweight game logic — perfect for fast training and testing loops.\n\n### 🔄 Agent Workflow\n\n1. 🔌 **Integration**: Used **socket communication** to connect a `TensorFlow` model in Python with a real-time scene in the **Godot 4.2** engine.\n2. 🕹️ **Control loop**:\n   - Python sends an action (e.g., flap or don't).\n   - Godot executes the action and returns updated game state.\n   - Agent receives rewards (surviving, scoring) or punishments (crashing).\n3. ♻️ Repeat millions of times — all inside a real game, not a mock simulation."
+                },
+                {
+                    "name": "5.png",
+                    "type": "image"
+                },
+                {
+                    "name": "6.txt",
+                    "type": "text",
+                    "content": "## ⚙️ Tools & Tech\n\n- 🧠 TensorFlow (Python) — RL logic and training.\n- 🕹️ Godot Engine 4.2 — real-time game environment.\n- 🔗 Socket server — communication between agent and game.\n- 🧪 Custom reward function — based on survival and score.\n\n## 📈 Training Journey\n\n- 🚀 Best score achieved by the trained agent: **266**\n- 🧪 One early training attempt failed after **11,000+ episodes** with zero progress 😂\n- 👨🏾‍🔬 Later iterations improved significantly, thanks to:\n  - Better model structure\n  - Smarter reward shaping\n  - More optimized state information exchange\n\n## 🤔 Lessons Learned\n\n- Game randomness might require longer training than expected 🎲\n- Socket latency could bottleneck real-time decision making 🐢\n- Model design has a major impact on learning capability 🧠\n\n## 🏁 Final Thoughts\n\nThis project was a **huge motivational boost** for my AI journey. It was challenging but so rewarding to watch a self-taught agent slowly master a game I personally enjoy (and sometimes hate 🤣). More to come, inshallah! 🙏🏾"
+                },
+                {
+                    "name": "7.jpeg",
+                    "type": "image"
+                }
+            ]
         },
         {
-          "name": "1.jpeg",
-          "type": "image"
+            "id": 2,
+            "index": 2,
+            "title": "Passport photo enhancer",
+            "category": "AI & Machine Learning",
+            "date": "01.4.2025",
+            "folder": "2-Passport photo enhancer (0-01.4.2025)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "# 🛂 Passport Photo Enhancer with Real-ESRGAN\n\nThis project fine-tunes the powerful [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) model to enhance **passport and ID-style facial images**, focusing on improving clarity and realism for low-quality or compressed photos."
+                },
+                {
+                    "name": "1.png",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "## 📦 Model Overview\n\n**Base Model:** Real-ESRGAN (Enhanced Super-Resolution Generative Adversarial Networks)\n\n**Modifications:**\n- Fine-tuned on passport-like face crops from **Flickr-Faces-HQ (FFHQ)** dataset\n- Emphasis on recovering fine facial details such as eyes, skin texture, and edges under compression and blurring\n\n**Target Use Case:**\n- Governmental or verification systems\n- Enhancing historical or scanned passport images\n- Identity restoration and enhancement pipelines"
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                },
+                {
+                    "name": "4.png",
+                    "type": "image"
+                },
+                {
+                    "name": "5.txt",
+                    "type": "text",
+                    "content": "## 🧠 Training Details\n\n- **Dataset:** [Flickr-Faces-HQ (FFHQ)](https://github.com/NVlabs/ffhq)\n  - 70,000 high-quality face images\n  - Preprocessed to simulate passport-like degradation (e.g., compression, resizing, blur)\n\n- **Training Platform:** Google Colab\n  - Used TPU/High-RAM runtime\n  - Mixed precision training with PyTorch + CUDA\n  - Custom augmentations and passport-style degradations applied on-the-fly\n\n- **Loss Functions:**\n  - Pixel Loss (L1)\n  - Perceptual Loss (VGG-based)\n  - Adversarial Loss (GAN Discriminator)\n  - Identity Loss (optional; based on ArcFace embeddings)"
+                },
+                {
+                    "name": "6.png",
+                    "type": "image"
+                },
+                {
+                    "name": "7.png",
+                    "type": "image"
+                }
+            ]
         },
         {
-          "name": "2.txt",
-          "type": "text",
-          "content": "## 🎯 Goal\n\nTrain an RL agent to play RoboFly, improving performance through trial and error inside a real game engine — **not just a simulated environment**.\n\n## 🧠 Reinforcement Learning Approach\n\nAfter diving into RL, I was fascinated by the core idea:\n> Let a model learn *by itself* through **rewards and punishments** in a simulated environment."
+            "id": 3,
+            "index": 3,
+            "title": "Crypto Telegram bot",
+            "category": "Frontend & Backend",
+            "date": "1.2.2025",
+            "folder": "3-Crypto Telegram bot (2-1.2.2025)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "### 📈 Technical Crypto Analyzer Bot\n\nA full-featured Telegram bot built with Python, enabling real-time technical analysis for cryptocurrencies. It supports RSI, MACD, Bollinger Bands, trend detection, and custom chart generation. Integrates with CoinGecko and CryptoCompare for live data and news sentiment analysis."
+                },
+                {
+                    "name": "1.png",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "### 🌍 Multi-language, Educational, and Visual\n\nProvides crypto trading insights in both English and Arabic. Users can access interactive charts (via Plotly & mplfinance), trading strategies, and glossary terms—making it not just a tool but a learning companion for crypto enthusiasts."
+                },
+                {
+                    "name": "3.jpg",
+                    "type": "image"
+                },
+                {
+                    "name": "4.png",
+                    "type": "image"
+                },
+                {
+                    "name": "5.txt",
+                    "type": "text",
+                    "content": "### ⚙️ Scalable & Modular Architecture\n\nStructured using clean modular components (e.g., `analysis/`, `bot/`, `data/`, `services/`). Supports async operations, caching, multiple database engines, and includes automated testing & CI setup. Designed for extensibility and high performance."
+                },
+                {
+                    "name": "6.png",
+                    "type": "image"
+                },
+                {
+                    "name": "7.jpg",
+                    "type": "image"
+                }
+            ]
         },
         {
-          "name": "3.png",
-          "type": "image"
+            "id": 4,
+            "index": 4,
+            "title": "Cats vs Dogs",
+            "category": "AI & Machine Learning",
+            "date": "10.12.2024",
+            "folder": "4-Cats vs Dogs (0-10.12.2024)",
+            "files": [
+                {
+                    "name": "0.jpg",
+                    "type": "image"
+                },
+                {
+                    "name": "1.txt",
+                    "type": "text",
+                    "content": "## 📁 Dataset\n\n- The dataset used is the **Dogs vs. Cats** dataset available on [Kaggle](https://www.kaggle.com/c/dogs-vs-cats/data).\n- Images are organized into subfolders under `./petImages/` for use with `torchvision.datasets.ImageFolder`.\n\n## 🧠 Model\n\n- Base architecture: **ResNet-18** pretrained on ImageNet.\n- Final fully connected layer adjusted to output 2 classes (Cat or Dog).\n- Training is done using **CrossEntropyLoss** and **Adam optimizer**.\n\n## 🏋️‍♂️ Training\n\nTraining is done in `main.ipynb` using the following setup:\n\n- Images are resized to 224x224 and normalized.\n- 80% of the dataset is used for training, 20% for validation.\n- Batch size: 100\n- Number of epochs: 10\n\nAfter training, the model is evaluated for validation accuracy.\n\n## 🧪 Testing\n\nThe `test.py` script takes an image path as an argument and outputs the prediction (Cat or Dog) along with a visual display.\n\n**Usage:**\n```bash\npython test.py path_to_image.jpg\n````"
+                },
+                {
+                    "name": "2.jpg",
+                    "type": "image"
+                },
+                {
+                    "name": "3.txt",
+                    "type": "text",
+                    "content": "## 🗃️ Saved Model\n\nTrained weights are saved to:\n\n```\ncats_vs_dogs_resnet18.pth\n```\n\n## 🛠️ Requirements\n\n* Python 3.x\n* torch\n* torchvision\n* matplotlib\n* pillow\n\nInstall dependencies with:\n\n```bash\npip install torch torchvision matplotlib pillow\n```\n\n## 🔍 Notes\n\n* Normalization stats (`mean`, `std`) were calculated from the dataset manually (see commented code in `main.ipynb`).\n* This project is intended for educational/demo purposes.\n\n## 📦 Acknowledgments\n\n* Dataset sourced from [Kaggle Dogs vs. Cats](https://www.kaggle.com/c/dogs-vs-cats).\n* Built using PyTorch and torchvision."
+                }
+            ]
         },
         {
-          "name": "4.txt",
-          "type": "text",
-          "content": "### 💡 Why RoboFly?\n\n- Simple scoring system makes performance easy to measure.\n- Game authored by @AhmedElnour123, meaning clean and modifiable code 💪.\n- Lightweight game logic — perfect for fast training and testing loops.\n\n### 🔄 Agent Workflow\n\n1. 🔌 **Integration**: Used **socket communication** to connect a `TensorFlow` model in Python with a real-time scene in the **Godot 4.2** engine.\n2. 🕹️ **Control loop**:\n   - Python sends an action (e.g., flap or don't).\n   - Godot executes the action and returns updated game state.\n   - Agent receives rewards (surviving, scoring) or punishments (crashing).\n3. ♻️ Repeat millions of times — all inside a real game, not a mock simulation."
+            "id": 5,
+            "index": 5,
+            "title": "VR Pocketbase API",
+            "category": "Frontend & Backend",
+            "date": "10.10.2023",
+            "folder": "5-VR Pocketbase API (2-10.10.2023)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "# 🎮 VR Training Platform Backend\n\nWelcome to the backend system powering a cutting-edge **VR Training Platform**! This service manages clients, VR devices, training sessions, and all associated data to deliver a seamless immersive experience."
+                },
+                {
+                    "name": "1.png",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "## 🧠 Overview\n\nThis backend uses a **two-tier architecture**:\n\n1. **🗄️ Core BaaS:** [PocketBase](https://pocketbase.io/) provides the database, real-time updates, file storage, and a REST API.\n2. **⚙️ Business Logic Layer:** A custom `Node.js + Express.js` API manages device linking, session flow, and data orchestration.\n\n---\n\n## ✨ Key Features\n\n- 🔐 **Client Authentication**  \n- 🎧 **VR Device Registration & Linking**  \n- 🧑‍🏫 **Training Session Management**  \n- 📊 **Performance Data Collection**  \n- 🧩 **Scenario Creation & Management**  \n- 🧾 **Action Logging for Audit Trails**\n\n---\n\n## 🛠️ Core Technologies\n\n| Tool            | Purpose                                           |\n|-----------------|---------------------------------------------------|\n| 💾 PocketBase   | Embedded database, WebSocket API, auth, storage   |\n| 🚀 Node.js      | Custom Express API for business logic             |\n| 🐳 Docker       | Containerized deployment                          |\n| ☁️ Fly.io       | Hosting using `fly.toml` config                   |\n| 📖 Swagger UI   | Interactive API docs via `swagger-jsdoc`          |\n| 🔄 Nodemon      | Hot reload during development                     |\n| 📦 Concurrently | Run both services together with ease              |\n\n---\n\n## 🗂️ Database Schema (PocketBase Collections)\n\n- **👤 clients:** Admin user auth (username, password, email)\n- **🔐 licenses:** Subscription tracking (seats_left per client)\n- **📱 unconnected_devices:** Temporary store for linking new devices\n- **🎧 devices:** Registered VR devices (serial number, status)\n- **🎯 scenarios:** Training scenario definitions (metrics & checklists)\n- **🎮 running_scenarios:** Active sessions & status queue\n- **📈 metrics / 🧾 checklist / ℹ️ additional_info:** Session data\n- **🧾 actions_log:** Auditable record of every significant action"
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                },
+                {
+                    "name": "4.txt",
+                    "type": "text",
+                    "content": "## 🔄 Device Linking Flow\n\n1. Client requests a new device → generates a **6-digit code**\n2. Code stored temporarily in `unconnected_devices`\n3. VR device sends code + serial number to `/devices/connect`\n4. Server verifies and registers the device in `devices` 🚀\n\n> ✅ **Collision Avoidance:** Auto-increments if code already exists!\n\n---\n\n## 🕹️ Session Management Flow\n\n- Client starts a session → writes to `running_scenarios`\n- Device polls `/devices/start_game` to check for updates\n- Decoupled, queue-like architecture for reliable sync 📡\n\n---\n\n## 📋 Audit Logging\n\nEvery API call (success or fail) is logged in `actions_log` with:\n- Client ID\n- User ID\n- Device ID\n- Scenario ID\n- Action type\n- Success status\n- Error message (if any)"
+                }
+            ]
         },
         {
-          "name": "5.png",
-          "type": "image"
+            "id": 6,
+            "index": 6,
+            "title": "KSA Sights Classification",
+            "category": "AI & Machine Learning",
+            "date": "10.4.2025",
+            "folder": "6-KSA Sights Classification (0-10.4.2025)",
+            "files": [
+                {
+                    "name": "0.png",
+                    "type": "image"
+                },
+                {
+                    "name": "1.txt",
+                    "type": "text",
+                    "content": "**🧠 AI Landmark Classifier (Back-End)**\nDeveloped a Flask-based API that classifies images of Saudi landmarks using a fine-tuned ResNet18 deep learning model. The model identifies 14 culturally significant locations and returns their names, confidence scores, and historical descriptions for tourists. It supports base64 image input and was deployed with full CORS support for frontend integration."
+                },
+                {
+                    "name": "2.png",
+                    "type": "image"
+                },
+                {
+                    "name": "3.txt",
+                    "type": "text",
+                    "content": "**🌐 Interactive React Front-End**\nBuilt an engaging web interface with React where users can upload or capture landmark photos to get instant predictions. The app highlights the identified landmark, confidence level, and an informative description, offering a smart and accessible tool for exploring Saudi heritage."
+                },
+                {
+                    "name": "4.png",
+                    "type": "image"
+                },
+                {
+                    "name": "5.txt",
+                    "type": "text",
+                    "content": "**📦 Full-Stack Deployment & Training Workflow**\nOrganized a modular project structure with separate training, back-end, and front-end directories. Included scripts for error checking, thumbnail collection, and model training for both 5 and 14 classes. Designed for easy deployment and scalability using tools like Gunicorn and requirements management via `requirements.txt`."
+                },
+                {
+                    "name": "6.png",
+                    "type": "image"
+                }
+            ]
         },
         {
-          "name": "6.txt",
-          "type": "text",
-          "content": "## ⚙️ Tools & Tech\n\n- 🧠 TensorFlow (Python) — RL logic and training.\n- 🕹️ Godot Engine 4.2 — real-time game environment.\n- 🔗 Socket server — communication between agent and game.\n- 🧪 Custom reward function — based on survival and score.\n\n## 📈 Training Journey\n\n- 🚀 Best score achieved by the trained agent: **266**\n- 🧪 One early training attempt failed after **11,000+ episodes** with zero progress 😂\n- 👨🏾‍🔬 Later iterations improved significantly, thanks to:\n  - Better model structure\n  - Smarter reward shaping\n  - More optimized state information exchange\n\n## 🤔 Lessons Learned\n\n- Game randomness might require longer training than expected 🎲\n- Socket latency could bottleneck real-time decision making 🐢\n- Model design has a major impact on learning capability 🧠\n\n## 🏁 Final Thoughts\n\nThis project was a **huge motivational boost** for my AI journey. It was challenging but so rewarding to watch a self-taught agent slowly master a game I personally enjoy (and sometimes hate 🤣). More to come, inshallah! 🙏🏾"
+            "id": 7,
+            "index": 7,
+            "title": "Breast Cancer Binary Calssification",
+            "category": "AI & Machine Learning",
+            "date": "10.1.2025",
+            "folder": "7-Breast Cancer Binary Calssification (0-10.1.2025)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "# 🧠✨ Breast Cancer Classification using PyTorch\n\nA powerful deep learning model built with **PyTorch** to classify breast cancer cases using the **Wisconsin Breast Cancer** dataset 🎗️🔬\n✅ Achieves **98.25% accuracy** on the test set!\n\n---\n\n## 📋 Table of Contents\n\n* [📌 Overview](#-overview)\n* [⚙️ Requirements](#-requirements)\n* [📁 Project Structure](#-project-structure)\n* [💻 Installation](#-installation)\n* [🏗️ Model Architecture](#-model-architecture)\n* [🏃‍♀️ Training Process](#-training-process)\n* [📊 Results](#-results)\n\n---\n\n## 📌 Overview\n\nThis project uses **PyTorch** to build a simple yet effective **neural network** that classifies breast cancer diagnoses 🩺🧬\nTrained on the Wisconsin dataset, the model features a **feedforward architecture** with one hidden layer — fast, efficient, and accurate!\n\n---\n\n## ⚙️ Requirements\n\nMake sure you have the following installed:\n\n* 🐍 Python 3.x\n* 🔥 PyTorch\n* 🖼️ torchvision\n* 📘 scikit-learn\n* ⚡ CUDA GPU (optional but recommended!)\n\n---\n\n## 📁 Project Structure\n\n🔍 Here's what the project includes:\n\n1. **🧹 Data Preprocessing**\n\n   * Load dataset, split (80-20), scale features, convert to tensors\n\n2. **🧠 Model Architecture**\n\n   * 30 input features → 128 neurons (ReLU) → 1 output (Sigmoid)\n\n3. **⚙️ Training Pipeline**\n\n   * Binary Cross-Entropy + Adam Optimizer\n   * Optional GPU acceleration 🚀"
+                },
+                {
+                    "name": "1.png",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "## 🏗️ Model Architecture\n\n```python\nclass NeuralNetwork(nn.Module):\n    def __init__(self, input_size, hidden_size, output_size):\n        super(NeuralNetwork, self).__init__()\n        self.fc1 = nn.Linear(input_size, hidden_size)\n        self.relu = nn.ReLU()\n        self.fc2 = nn.Linear(hidden_size, output_size)\n        self.sigmoid = nn.Sigmoid()\n\n    def forward(self, x):\n        out = self.fc1(x)\n        out = self.relu(out)\n        out = self.fc2(out)\n        out = self.sigmoid(out)\n        return out\n```\n\n📐 **Hyperparameters**\n\n* Input size: 30\n* Hidden size: 128\n* Output size: 1\n* Learning rate: 0.001\n* Epochs: 100\n\n---\n\n## 🏃‍♀️ Training Process\n\n🛠️ The training flow includes:\n\n* **📦 Data prep**: Load, split, scale, tensorify\n\n* **🔁 Model loop**:\n\n  * Forward → Loss → Backprop → Optimize\n  * Log every 10 epochs\n\n* **✅ Evaluation**:\n\n  * Test set validation\n  * Accuracy tracking\n\n\n## 📷 Visualizations\n\n### 🔍 Mean Smoothness\n\n### 📊 Dataset Plot\n\n### 📈 Data Count"
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                },
+                {
+                    "name": "4.png",
+                    "type": "image"
+                },
+                {
+                    "name": "5.png",
+                    "type": "image"
+                }
+            ]
         },
         {
-          "name": "7.jpeg",
-          "type": "image"
+            "id": 8,
+            "index": 8,
+            "title": "AR First-Aid",
+            "category": "Game Development",
+            "date": "1.9.2023",
+            "folder": "8-AR First-Aid (1-1.9.2023)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "# 🆘 AR CPR First Aid Game 🚑💓\n\nAn **Augmented Reality (AR)** based Unity game designed to **teach and simulate CPR** (Cardiopulmonary Resuscitation) in an interactive and engaging way!\n\n---\n\n## 🎮 Game Overview\n\nIn this game, players use their device's camera to scan their environment and **locate an injured person** through AR. Once found, a **CPR timing beat** starts to guide the player."
+                },
+                {
+                    "name": "1.jpg",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "🫀 **Your Mission**:  \nSynchronize your chest compressions (by tapping the screen) with the beat to **perform CPR correctly** and **rescue the patient**!\n\n---\n\n## 🧠 Features\n\n- 🔍 **Real-world interaction** via AR\n- 🎵 **Timed CPR beat** based on medical guidelines\n- 🖱️ **Tap to compress** rhythm gameplay\n- 🎯 Feedback on compression accuracy\n- 📚 Educational goal: Teach CPR in a fun and memorable way\n\n---\n\n## 🛠️ Tech Stack\n\n- 🎮 **Unity Engine**\n- 📱 **AR Foundation**\n- 🌍 **ARKit / ARCore** support\n- 🎵 **Custom audio beat sync system**\n\n---"
+                },
+                {
+                    "name": "3.jpg",
+                    "type": "image"
+                },
+                {
+                    "name": "4.txt",
+                    "type": "text",
+                    "content": "## 📖 Credits\n\nMade with ❤️ by a team passionate about **gamified learning** and **emergency response awareness**.\n\n---\n\n## 📢 Disclaimer\n\nThis app is for **educational and entertainment** purposes only and should not be considered a substitute for certified medical training.\n\n---\n\n## 🩺 Learn CPR. Save Lives.\n\n> \"Push hard, push fast — with rhythm.\" 🕒💪🎶"
+                },
+                {
+                    "name": "5.jpg",
+                    "type": "image"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "index": 9,
+            "title": "Hulla API (Firebase)",
+            "category": "Frontend & Backend",
+            "date": "1.1.2022",
+            "folder": "9-Hulla API (Firebase) (2-1.1.2022)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "# 🔥📚 Hulla Firebase API\n\nA fast, Firebase-powered backend built with **Express.js** and **Firestore**!\n🚀 Supports student & teacher registration, authentication, and Qur'an memorization records tracking — all in real-time!\n\n---\n\n## ⚙️ Tech Stack\n\n* 🧠 **Express.js** – Server-side framework\n* 🌐 **Firebase Firestore** – Cloud database\n* 🔐 **CORS** – Secure cross-origin access\n* 🧩 **ES Modules** – Clean modern syntax\n* 🌍 Deployed via **Node.js** + `Procfile`\n\n---\n\n## ✨ Key Features\n\n🔹 **👨‍🏫 Teacher & 👩‍🎓 Student Registration**\nEffortlessly register users to Firebase collections.\n\n🔹 **🔐 Login System**\nSecure login routes that fetch teacher or student data, with conditional access to student lists.\n\n🔹 **📅 Records Management**\nFull CRUD API for memorization records:\n\n* ➕ Add new records\n* 📝 Edit existing ones\n* ❌ Delete records\n* 🔍 Filter by date & username"
+                },
+                {
+                    "name": "1.png",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "## 🚀 API Endpoints\n\n### 📝 Registration\n\n* `POST /abualmun/register/teachers`\n* `POST /abualmun/register/students`\n\n### 🔐 Login\n\n* `POST /login/teachers`\n* `POST /login/students`\n\n### 📊 Records\n\n* `POST /records` – Filter records by user/date\n* `POST /records/add` – Add new record\n* `POST /records/edit` – Update a record\n* `POST /records/delete` – Delete a record\n\n---\n\n## 🧪 Quick Start\n\n```bash\n# Install dependencies\nnpm install\n\n# Start the server\nnode -r esm index.js\n```"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "index": 10,
+            "title": "Client Portfolio",
+            "category": "Frontend & Backend",
+            "date": "1.10.2024",
+            "folder": "10-Client Portfolio (2-1.10.2024)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "**🧾 Client Portfolio Website**\nDeveloped and deployed a responsive portfolio site for a client using Flutter Web. The app features smooth UI performance and custom Arabic fonts for localization.\nGo check it out now! https://tadgeeg.com"
+                },
+                {
+                    "name": "1.png",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "**🚀 Hosting & Deployment**\nDeployed via GitHub Pages with custom domain configuration through Namecheap. Managed DNS, CNAME setup, and ensured optimized static asset delivery.\n\n---\n\n**📁 Tech Stack & Structure**\nUsed Flutter for frontend development. Structured assets, fonts, and web runtime files for scalable deployment. Leveraged `canvaskit` for high-performance rendering."
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "index": 11,
+            "title": "Hulla Flutter",
+            "category": "Frontend & Backend",
+            "date": "2.1.2022",
+            "folder": "11-Hulla Flutter (2-2.1.2022)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "# 📖 Hulla (حُـلَّـة)\n\n🌟 *A modern solution to organize and track Quran memorization for students and teachers.*\n\n---\n\n## ✨ About The Project\n\nKeeping track of Quran memorization progress in a college environment can be overwhelming 📚. Traditional methods like papers and spreadsheets are inefficient and error-prone 🧾❌. **Hulla** was created to solve this challenge by offering a digital, user-friendly experience."
+                },
+                {
+                    "name": "1.png",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "👨‍🏫 **Teachers** can:\n\n* View student history\n* Filter by date 🗓️\n* Add/edit/delete records\n\n🧑‍🎓 **Students** can:\n\n* Track their own progress\n* Stay motivated and organized 💪\n\nThis app bridges the gap between spiritual growth and smart technology 💡🕌.\n\n---\n\n## 🚀 Features\n\n✅ Role-based views (Students 👨‍🎓 / Teachers 👩‍🏫)\n✅ Student selection dropdown 📋\n✅ Memorization record logging (Surah, Ayahs, Grade) 📖\n✅ Date range filtering for reports 🗂️\n✅ Full CRUD for memorization records ✍️\n✅ Cross-platform: Android 🤖, Web 🌐, Linux 🐧\n\n---\n\n## 🛠️ Built With\n\n* 🧩 **Flutter** – UI toolkit for multi-platform apps\n* 🧠 **Dart** – The language behind Flutter\n* 🔌 **http** – API integration\n* 📦 **flutter\\_bloc** – State management\n* 🕰️ **intl** – Date formatting\n\n---"
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "index": 12,
+            "title": "Swipe Squad",
+            "category": "Game Development",
+            "date": "10.3.2025",
+            "folder": "12-Swipe Squad (1-10.3.2025)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "### Crowd Runner Game – Level-Based Casual Mobile Game\n\n**Overview:**\nA fast-paced, level-based casual game where players control and grow a crowd of units as they move through an urban environment. The goal is to strategically navigate the path, gather new allies, and defeat opposing crowds in head-on clashes.\n\n**Features:**\n\n* Crowd growth mechanics and real-time group combat.\n* Simple, intuitive controls for mass movement.\n* Dynamic enemy encounters with scaling difficulty.\n* Clean, stylized 3D visuals optimized for mobile.\n* Level progression with coin-based scoring and resource collection."
+                },
+                {
+                    "name": "1.png",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "**Tech Stack:**\nDeveloped in **Unity** with C# scripting and optimized for **1920x1080 portrait resolution**. Emphasis on performance, smooth animations, and visually engaging UI."
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "index": 13,
+            "title": "Duck Escape",
+            "category": "Game Development",
+            "date": "28.2.2025",
+            "folder": "13-Duck Escape (1-28.2.2025)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "# 🌊🐟 Game Overview\n\nDive into **a thrilling 3D endless runner** set in a vibrant aquatic world! 🌴🌊\nOutswim a **relentless shark 🦈** as you leap across floating debris, dodge dangerous obstacles, and survive the chaotic beauty of the open sea. 🌅\nFast-paced action meets clever movement in this adrenaline-fueled adventure! ⚡🎮"
+                },
+                {
+                    "name": "1.png",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "# 🎮💡 Creative Game Mechanics\n\nExperience **gameplay with heart (literally!) ❤️👶** — your children act as your health bar!\nEvery hit costs you a family member, mixing laughs 😂 with real stakes 😱.\nFrom **sinking planks 🪵** to surprise hazards 🚧, no two runs are the same — it's strategic, emotional, and unforgettable!"
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                },
+                {
+                    "name": "4.png",
+                    "type": "image"
+                },
+                {
+                    "name": "5.txt",
+                    "type": "text",
+                    "content": "# 🛠️🚀 Technical Achievement\n\nBuilt from scratch as a fully-optimized 3D endless runner 💻🏃‍♂️\n\n* 🌐 **Procedural obstacle generation** keeps the action fresh\n* 🎥 **Dynamic camera system** for cinematic chases\n* 🧠 **Advanced Shark AI** always keeps you on your fins\n* 🌊 **Custom physics + water FX** create a rich underwater vibe with smooth, responsive gameplay"
+                },
+                {
+                    "name": "6.png",
+                    "type": "image"
+                },
+                {
+                    "name": "8.png",
+                    "type": "image"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "index": 14,
+            "title": "Words Food",
+            "category": "Game Development",
+            "date": "30.4.2022",
+            "folder": "14-Words Food (1-30.4.2022)",
+            "files": [
+                {
+                    "name": "0.txt",
+                    "type": "text",
+                    "content": "# 📚 Kids Learning Game 🎮\n\nA fun and interactive Unity-based educational game designed to teach children letters, words, and everyday vocabulary through engaging visuals and intuitive gameplay. Perfect for preschool and early primary learners!"
+                },
+                {
+                    "name": "1.png",
+                    "type": "image"
+                },
+                {
+                    "name": "2.txt",
+                    "type": "text",
+                    "content": "## 🧠 Game Concept\n\nThis game helps children:\n- Learn the alphabet 🅰️🅱️\n- Recognize and spell words 🧁🧀🍞\n- Build their vocabulary with visual aids 🖼️\n- Improve memory and word association\n\n## 🕹️ How to Play\n\n- Children are presented with colorful images of objects or food.\n- They must select the correct word that matches the image.\n- The game uses large buttons and simple UI for easy navigation.\n\nExample Activities:\n- Tap the correct name of a shown object (e.g., **bread**, **cheese**, **chicken**).\n- Progress through levels of increasing difficulty and vocabulary."
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                },
+                {
+                    "name": "4.txt",
+                    "type": "text",
+                    "content": "## 🧩 Features\n\n- 👶 Kid-friendly interface and controls\n- 🔊 Audio feedback for correct/incorrect answers\n- 🖼️ Bright visuals and engaging images\n- 🏆 Progressive learning with levels and rewards\n\n## 🛠️ Tech Stack\n\n- **Engine:** Unity\n- **Language:** C#\n- **Platform:** Mobile (Android/iOS) and Desktop\n- **Target Audience:** Kids aged 3–7"
+                },
+                {
+                    "name": "5.png",
+                    "type": "image"
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "index": 15,
+            "title": "AL Marai",
+            "category": "Game Development",
+            "date": "1.5.2025",
+            "folder": "15-AL Marai (1-1.5.2025)",
+            "files": [
+                {
+                    "name": "0.jpg",
+                    "type": "image"
+                },
+                {
+                    "name": "1.txt",
+                    "type": "text",
+                    "content": "**🎮 Interactive Educational Game Design**\nDeveloped a digital \"fill in the blanks\" game inspired by Hangman to promote Almarai Fresh Milk. The game challenges users to guess a unified phrase, reinforcing healthy habits through playful engagement."
+                },
+                {
+                    "name": "2.jpg",
+                    "type": "image"
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                },
+                {
+                    "name": "4.txt",
+                    "type": "text",
+                    "content": "**🧠 Game Mechanics with Visual Feedback**\nEach correct letter pours milk into a virtual glass, providing instant visual and sound feedback. The glass fills up with each correct guess, while incorrect answers trigger humorous cow sounds and sad animations, enhancing user interaction."
+                },
+                {
+                    "name": "5.jpg",
+                    "type": "image"
+                },
+                {
+                    "name": "6.txt",
+                    "type": "text",
+                    "content": "**🌍 Bilingual Experience & Brand Integration**\nThe app supports English and Arabic phrases (“Milk every day is the smart way” / \"شرب الحليب سر اللبيب\") to ensure wide accessibility. Visuals and audio are tightly integrated with Almarai’s branding to maximize engagement and recall."
+                },
+                {
+                    "name": "7.jpg",
+                    "type": "image"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "index": 16,
+            "title": "Chicken on a mission",
+            "category": "Game Development",
+            "date": "1.3.2021",
+            "folder": "16-Chicken on a mission (1-1.3.2021)",
+            "files": [
+                {
+                    "name": "0.png",
+                    "type": "image"
+                },
+                {
+                    "name": "1.txt",
+                    "type": "text",
+                    "content": "# 🐔 Chicken On A Mission\n**Sack Escape** is a fast-paced 3D game where you play as a brave chicken trying to collect scattered sacks while dodging dangerous barbarians. The game takes place on a spherical world, and the chase never stops!"
+                },
+                {
+                    "name": "2.png",
+                    "type": "image"
+                },
+                {
+                    "name": "3.png",
+                    "type": "image"
+                },
+                {
+                    "name": "4.txt",
+                    "type": "text",
+                    "content": "## 🎮 Game Concept\n\nYou're a determined chicken with one goal: collect all the sacks before the barbarians catch you. They're strong, fast, and relentless — but you're smarter, sneakier, and lighter on your claws.\n\n## 🧠 Vector-Based Movement\n\nThe core of the game’s mechanics is built around **vector calculations**. Everything — from chasing, escaping, to collecting items — is done using custom vector math. Here are a few highlights:\n\n* 🧭 The chicken always orients to walk on a spherical terrain. Movement is handled with smooth vector-based rotation and orientation.\n* 🏃 The player's movement isn't just “left” and “right” — it's defined by movement **relative to the planet's surface**, ensuring the character stays grounded in all directions.\n* 📡 Enemies detect and pursue the player using `Vector3.MoveTowards` and awake based on a calculated radius.\n* 🧲 Collectables and enemies respond to dynamic vectors, adjusting behavior as the player moves across the globe."
+                },
+                {
+                    "name": "5.png",
+                    "type": "image"
+                },
+                {
+                    "name": "6.txt",
+                    "type": "text",
+                    "content": "## 🐔 Player Movement\n\nWe put a lot of effort into making movement *feel right*:\n\n* Smooth spherical gravity ensures your chicken hugs the planet surface at all times.\n* Directional movement works even when the \"up\" vector changes — thanks to world space vector projection.\n* The chicken can sprint, turn sharply, and react naturally to terrain curvature.\n\n## 🛡️ Features\n\n* 🎒 Sack collection with animation and sound feedback.\n* 🪓 Barbarians with detection zones and chase logic.\n* 🌍 A planet-based level that feels immersive and continuous.\n* 🧭 Optional minimap and sack indicators to help navigate.\n* ✨ Visual particles and feedback systems in the works."
+                },
+                {
+                    "name": "7.png",
+                    "type": "image"
+                },
+                {
+                    "name": "8.txt",
+                    "type": "text",
+                    "content": "## 🔧 Known Issues (but they’re part of the charm!)\n\n* Moving directly across the planet may sometimes slow down due to the limitations of straight-line movement on curved space.\n* Win/Lose conditions are being refined for frame-accurate responsiveness.\n* Close encounters with enemies can feel abrupt (we're tuning the hit delay)."
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": 2,
-      "index": 2,
-      "title": "Passport photo enhancer",
-      "category": "AI & Machine Learning",
-      "date": "01.4.2025",
-      "folder": "2-Passport photo enhancer (0-01.4.2025)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "# 🛂 Passport Photo Enhancer with Real-ESRGAN\n\nThis project fine-tunes the powerful [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) model to enhance **passport and ID-style facial images**, focusing on improving clarity and realism for low-quality or compressed photos."
-        },
-        {
-          "name": "1.png",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "## 📦 Model Overview\n\n**Base Model:** Real-ESRGAN (Enhanced Super-Resolution Generative Adversarial Networks)\n\n**Modifications:**\n- Fine-tuned on passport-like face crops from **Flickr-Faces-HQ (FFHQ)** dataset\n- Emphasis on recovering fine facial details such as eyes, skin texture, and edges under compression and blurring\n\n**Target Use Case:**\n- Governmental or verification systems\n- Enhancing historical or scanned passport images\n- Identity restoration and enhancement pipelines"
-        },
-        {
-          "name": "3.png",
-          "type": "image"
-        },
-        {
-          "name": "4.png",
-          "type": "image"
-        },
-        {
-          "name": "5.txt",
-          "type": "text",
-          "content": "## 🧠 Training Details\n\n- **Dataset:** [Flickr-Faces-HQ (FFHQ)](https://github.com/NVlabs/ffhq)\n  - 70,000 high-quality face images\n  - Preprocessed to simulate passport-like degradation (e.g., compression, resizing, blur)\n\n- **Training Platform:** Google Colab\n  - Used TPU/High-RAM runtime\n  - Mixed precision training with PyTorch + CUDA\n  - Custom augmentations and passport-style degradations applied on-the-fly\n\n- **Loss Functions:**\n  - Pixel Loss (L1)\n  - Perceptual Loss (VGG-based)\n  - Adversarial Loss (GAN Discriminator)\n  - Identity Loss (optional; based on ArcFace embeddings)"
-        },
-        {
-          "name": "6.png",
-          "type": "image"
-        },
-        {
-          "name": "7.png",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "index": 3,
-      "title": "Crypto Telegram bot",
-      "category": "Frontend & Backend",
-      "date": "1.2.2025",
-      "folder": "3-Crypto Telegram bot (2-1.2.2025)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "### 📈 Technical Crypto Analyzer Bot\n\nA full-featured Telegram bot built with Python, enabling real-time technical analysis for cryptocurrencies. It supports RSI, MACD, Bollinger Bands, trend detection, and custom chart generation. Integrates with CoinGecko and CryptoCompare for live data and news sentiment analysis."
-        },
-        {
-          "name": "1.png",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "### 🌍 Multi-language, Educational, and Visual\n\nProvides crypto trading insights in both English and Arabic. Users can access interactive charts (via Plotly & mplfinance), trading strategies, and glossary terms—making it not just a tool but a learning companion for crypto enthusiasts."
-        },
-        {
-          "name": "3.jpg",
-          "type": "image"
-        },
-        {
-          "name": "4.png",
-          "type": "image"
-        },
-        {
-          "name": "5.txt",
-          "type": "text",
-          "content": "### ⚙️ Scalable & Modular Architecture\n\nStructured using clean modular components (e.g., `analysis/`, `bot/`, `data/`, `services/`). Supports async operations, caching, multiple database engines, and includes automated testing & CI setup. Designed for extensibility and high performance."
-        },
-        {
-          "name": "6.png",
-          "type": "image"
-        },
-        {
-          "name": "7.jpg",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "index": 4,
-      "title": "Cats vs Dogs",
-      "category": "AI & Machine Learning",
-      "date": "10.12.2024",
-      "folder": "4-Cats vs Dogs (0-10.12.2024)",
-      "files": [
-        {
-          "name": "0.jpg",
-          "type": "image"
-        },
-        {
-          "name": "1.txt",
-          "type": "text",
-          "content": "## 📁 Dataset\n\n- The dataset used is the **Dogs vs. Cats** dataset available on [Kaggle](https://www.kaggle.com/c/dogs-vs-cats/data).\n- Images are organized into subfolders under `./petImages/` for use with `torchvision.datasets.ImageFolder`.\n\n## 🧠 Model\n\n- Base architecture: **ResNet-18** pretrained on ImageNet.\n- Final fully connected layer adjusted to output 2 classes (Cat or Dog).\n- Training is done using **CrossEntropyLoss** and **Adam optimizer**.\n\n## 🏋️‍♂️ Training\n\nTraining is done in `main.ipynb` using the following setup:\n\n- Images are resized to 224x224 and normalized.\n- 80% of the dataset is used for training, 20% for validation.\n- Batch size: 100\n- Number of epochs: 10\n\nAfter training, the model is evaluated for validation accuracy.\n\n## 🧪 Testing\n\nThe `test.py` script takes an image path as an argument and outputs the prediction (Cat or Dog) along with a visual display.\n\n**Usage:**\n```bash\npython test.py path_to_image.jpg\n````"
-        },
-        {
-          "name": "2.jpg",
-          "type": "image"
-        },
-        {
-          "name": "3.txt",
-          "type": "text",
-          "content": "## 🗃️ Saved Model\n\nTrained weights are saved to:\n\n```\ncats_vs_dogs_resnet18.pth\n```\n\n## 🛠️ Requirements\n\n* Python 3.x\n* torch\n* torchvision\n* matplotlib\n* pillow\n\nInstall dependencies with:\n\n```bash\npip install torch torchvision matplotlib pillow\n```\n\n## 🔍 Notes\n\n* Normalization stats (`mean`, `std`) were calculated from the dataset manually (see commented code in `main.ipynb`).\n* This project is intended for educational/demo purposes.\n\n## 📦 Acknowledgments\n\n* Dataset sourced from [Kaggle Dogs vs. Cats](https://www.kaggle.com/c/dogs-vs-cats).\n* Built using PyTorch and torchvision."
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "index": 5,
-      "title": "VR Pocketbase API",
-      "category": "Frontend & Backend",
-      "date": "10.10.2023",
-      "folder": "5-VR Pocketbase API (2-10.10.2023)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "# 🎮 VR Training Platform Backend\n\nWelcome to the backend system powering a cutting-edge **VR Training Platform**! This service manages clients, VR devices, training sessions, and all associated data to deliver a seamless immersive experience."
-        },
-        {
-          "name": "1.png",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "## 🧠 Overview\n\nThis backend uses a **two-tier architecture**:\n\n1. **🗄️ Core BaaS:** [PocketBase](https://pocketbase.io/) provides the database, real-time updates, file storage, and a REST API.\n2. **⚙️ Business Logic Layer:** A custom `Node.js + Express.js` API manages device linking, session flow, and data orchestration.\n\n---\n\n## ✨ Key Features\n\n- 🔐 **Client Authentication**  \n- 🎧 **VR Device Registration & Linking**  \n- 🧑‍🏫 **Training Session Management**  \n- 📊 **Performance Data Collection**  \n- 🧩 **Scenario Creation & Management**  \n- 🧾 **Action Logging for Audit Trails**\n\n---\n\n## 🛠️ Core Technologies\n\n| Tool            | Purpose                                           |\n|-----------------|---------------------------------------------------|\n| 💾 PocketBase   | Embedded database, WebSocket API, auth, storage   |\n| 🚀 Node.js      | Custom Express API for business logic             |\n| 🐳 Docker       | Containerized deployment                          |\n| ☁️ Fly.io       | Hosting using `fly.toml` config                   |\n| 📖 Swagger UI   | Interactive API docs via `swagger-jsdoc`          |\n| 🔄 Nodemon      | Hot reload during development                     |\n| 📦 Concurrently | Run both services together with ease              |\n\n---\n\n## 🗂️ Database Schema (PocketBase Collections)\n\n- **👤 clients:** Admin user auth (username, password, email)\n- **🔐 licenses:** Subscription tracking (seats_left per client)\n- **📱 unconnected_devices:** Temporary store for linking new devices\n- **🎧 devices:** Registered VR devices (serial number, status)\n- **🎯 scenarios:** Training scenario definitions (metrics & checklists)\n- **🎮 running_scenarios:** Active sessions & status queue\n- **📈 metrics / 🧾 checklist / ℹ️ additional_info:** Session data\n- **🧾 actions_log:** Auditable record of every significant action"
-        },
-        {
-          "name": "3.png",
-          "type": "image"
-        },
-        {
-          "name": "4.txt",
-          "type": "text",
-          "content": "## 🔄 Device Linking Flow\n\n1. Client requests a new device → generates a **6-digit code**\n2. Code stored temporarily in `unconnected_devices`\n3. VR device sends code + serial number to `/devices/connect`\n4. Server verifies and registers the device in `devices` 🚀\n\n> ✅ **Collision Avoidance:** Auto-increments if code already exists!\n\n---\n\n## 🕹️ Session Management Flow\n\n- Client starts a session → writes to `running_scenarios`\n- Device polls `/devices/start_game` to check for updates\n- Decoupled, queue-like architecture for reliable sync 📡\n\n---\n\n## 📋 Audit Logging\n\nEvery API call (success or fail) is logged in `actions_log` with:\n- Client ID\n- User ID\n- Device ID\n- Scenario ID\n- Action type\n- Success status\n- Error message (if any)"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "index": 6,
-      "title": "KSA Sights Classification",
-      "category": "AI & Machine Learning",
-      "date": "10.4.2025",
-      "folder": "6-KSA Sights Classification (0-10.4.2025)",
-      "files": [
-        {
-          "name": "0.png",
-          "type": "image"
-        },
-        {
-          "name": "1.txt",
-          "type": "text",
-          "content": "**🧠 AI Landmark Classifier (Back-End)**\nDeveloped a Flask-based API that classifies images of Saudi landmarks using a fine-tuned ResNet18 deep learning model. The model identifies 14 culturally significant locations and returns their names, confidence scores, and historical descriptions for tourists. It supports base64 image input and was deployed with full CORS support for frontend integration."
-        },
-        {
-          "name": "2.png",
-          "type": "image"
-        },
-        {
-          "name": "3.txt",
-          "type": "text",
-          "content": "**🌐 Interactive React Front-End**\nBuilt an engaging web interface with React where users can upload or capture landmark photos to get instant predictions. The app highlights the identified landmark, confidence level, and an informative description, offering a smart and accessible tool for exploring Saudi heritage."
-        },
-        {
-          "name": "4.png",
-          "type": "image"
-        },
-        {
-          "name": "5.txt",
-          "type": "text",
-          "content": "**📦 Full-Stack Deployment & Training Workflow**\nOrganized a modular project structure with separate training, back-end, and front-end directories. Included scripts for error checking, thumbnail collection, and model training for both 5 and 14 classes. Designed for easy deployment and scalability using tools like Gunicorn and requirements management via `requirements.txt`."
-        },
-        {
-          "name": "6.png",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "index": 7,
-      "title": "Breast Cancer Binary Calssification",
-      "category": "AI & Machine Learning",
-      "date": "10.1.2025",
-      "folder": "7-Breast Cancer Binary Calssification (0-10.1.2025)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "# 🧠✨ Breast Cancer Classification using PyTorch\n\nA powerful deep learning model built with **PyTorch** to classify breast cancer cases using the **Wisconsin Breast Cancer** dataset 🎗️🔬\n✅ Achieves **98.25% accuracy** on the test set!\n\n---\n\n## 📋 Table of Contents\n\n* [📌 Overview](#-overview)\n* [⚙️ Requirements](#-requirements)\n* [📁 Project Structure](#-project-structure)\n* [💻 Installation](#-installation)\n* [🏗️ Model Architecture](#-model-architecture)\n* [🏃‍♀️ Training Process](#-training-process)\n* [📊 Results](#-results)\n\n---\n\n## 📌 Overview\n\nThis project uses **PyTorch** to build a simple yet effective **neural network** that classifies breast cancer diagnoses 🩺🧬\nTrained on the Wisconsin dataset, the model features a **feedforward architecture** with one hidden layer — fast, efficient, and accurate!\n\n---\n\n## ⚙️ Requirements\n\nMake sure you have the following installed:\n\n* 🐍 Python 3.x\n* 🔥 PyTorch\n* 🖼️ torchvision\n* 📘 scikit-learn\n* ⚡ CUDA GPU (optional but recommended!)\n\n---\n\n## 📁 Project Structure\n\n🔍 Here's what the project includes:\n\n1. **🧹 Data Preprocessing**\n\n   * Load dataset, split (80-20), scale features, convert to tensors\n\n2. **🧠 Model Architecture**\n\n   * 30 input features → 128 neurons (ReLU) → 1 output (Sigmoid)\n\n3. **⚙️ Training Pipeline**\n\n   * Binary Cross-Entropy + Adam Optimizer\n   * Optional GPU acceleration 🚀"
-        },
-        {
-          "name": "1.png",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "## 🏗️ Model Architecture\n\n```python\nclass NeuralNetwork(nn.Module):\n    def __init__(self, input_size, hidden_size, output_size):\n        super(NeuralNetwork, self).__init__()\n        self.fc1 = nn.Linear(input_size, hidden_size)\n        self.relu = nn.ReLU()\n        self.fc2 = nn.Linear(hidden_size, output_size)\n        self.sigmoid = nn.Sigmoid()\n\n    def forward(self, x):\n        out = self.fc1(x)\n        out = self.relu(out)\n        out = self.fc2(out)\n        out = self.sigmoid(out)\n        return out\n```\n\n📐 **Hyperparameters**\n\n* Input size: 30\n* Hidden size: 128\n* Output size: 1\n* Learning rate: 0.001\n* Epochs: 100\n\n---\n\n## 🏃‍♀️ Training Process\n\n🛠️ The training flow includes:\n\n* **📦 Data prep**: Load, split, scale, tensorify\n\n* **🔁 Model loop**:\n\n  * Forward → Loss → Backprop → Optimize\n  * Log every 10 epochs\n\n* **✅ Evaluation**:\n\n  * Test set validation\n  * Accuracy tracking\n\n\n## 📷 Visualizations\n\n### 🔍 Mean Smoothness\n\n### 📊 Dataset Plot\n\n### 📈 Data Count"
-        },
-        {
-          "name": "3.png",
-          "type": "image"
-        },
-        {
-          "name": "4.png",
-          "type": "image"
-        },
-        {
-          "name": "5.png",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "index": 8,
-      "title": "AR First-Aid",
-      "category": "Game Development",
-      "date": "1.9.2023",
-      "folder": "8-AR First-Aid (1-1.9.2023)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "# 🆘 AR CPR First Aid Game 🚑💓\n\nAn **Augmented Reality (AR)** based Unity game designed to **teach and simulate CPR** (Cardiopulmonary Resuscitation) in an interactive and engaging way!\n\n---\n\n## 🎮 Game Overview\n\nIn this game, players use their device's camera to scan their environment and **locate an injured person** through AR. Once found, a **CPR timing beat** starts to guide the player."
-        },
-        {
-          "name": "1.jpg",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "🫀 **Your Mission**:  \nSynchronize your chest compressions (by tapping the screen) with the beat to **perform CPR correctly** and **rescue the patient**!\n\n---\n\n## 🧠 Features\n\n- 🔍 **Real-world interaction** via AR\n- 🎵 **Timed CPR beat** based on medical guidelines\n- 🖱️ **Tap to compress** rhythm gameplay\n- 🎯 Feedback on compression accuracy\n- 📚 Educational goal: Teach CPR in a fun and memorable way\n\n---\n\n## 🛠️ Tech Stack\n\n- 🎮 **Unity Engine**\n- 📱 **AR Foundation**\n- 🌍 **ARKit / ARCore** support\n- 🎵 **Custom audio beat sync system**\n\n---"
-        },
-        {
-          "name": "3.jpg",
-          "type": "image"
-        },
-        {
-          "name": "4.txt",
-          "type": "text",
-          "content": "## 📖 Credits\n\nMade with ❤️ by a team passionate about **gamified learning** and **emergency response awareness**.\n\n---\n\n## 📢 Disclaimer\n\nThis app is for **educational and entertainment** purposes only and should not be considered a substitute for certified medical training.\n\n---\n\n## 🩺 Learn CPR. Save Lives.\n\n> \"Push hard, push fast — with rhythm.\" 🕒💪🎶"
-        },
-        {
-          "name": "5.jpg",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "index": 9,
-      "title": "Hulla API (Firebase)",
-      "category": "Frontend & Backend",
-      "date": "1.1.2022",
-      "folder": "9-Hulla API (Firebase) (2-1.1.2022)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "# 🔥📚 Hulla Firebase API\n\nA fast, Firebase-powered backend built with **Express.js** and **Firestore**!\n🚀 Supports student & teacher registration, authentication, and Qur'an memorization records tracking — all in real-time!\n\n---\n\n## ⚙️ Tech Stack\n\n* 🧠 **Express.js** – Server-side framework\n* 🌐 **Firebase Firestore** – Cloud database\n* 🔐 **CORS** – Secure cross-origin access\n* 🧩 **ES Modules** – Clean modern syntax\n* 🌍 Deployed via **Node.js** + `Procfile`\n\n---\n\n## ✨ Key Features\n\n🔹 **👨‍🏫 Teacher & 👩‍🎓 Student Registration**\nEffortlessly register users to Firebase collections.\n\n🔹 **🔐 Login System**\nSecure login routes that fetch teacher or student data, with conditional access to student lists.\n\n🔹 **📅 Records Management**\nFull CRUD API for memorization records:\n\n* ➕ Add new records\n* 📝 Edit existing ones\n* ❌ Delete records\n* 🔍 Filter by date & username"
-        },
-        {
-          "name": "1.png",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "## 🚀 API Endpoints\n\n### 📝 Registration\n\n* `POST /abualmun/register/teachers`\n* `POST /abualmun/register/students`\n\n### 🔐 Login\n\n* `POST /login/teachers`\n* `POST /login/students`\n\n### 📊 Records\n\n* `POST /records` – Filter records by user/date\n* `POST /records/add` – Add new record\n* `POST /records/edit` – Update a record\n* `POST /records/delete` – Delete a record\n\n---\n\n## 🧪 Quick Start\n\n```bash\n# Install dependencies\nnpm install\n\n# Start the server\nnode -r esm index.js\n```"
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "index": 10,
-      "title": "Client Portfolio",
-      "category": "Frontend & Backend",
-      "date": "1.10.2024",
-      "folder": "10-Client Portfolio (2-1.10.2024)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "**🧾 Client Portfolio Website**\nDeveloped and deployed a responsive portfolio site for a client using Flutter Web. The app features smooth UI performance and custom Arabic fonts for localization.\nGo check it out now! https://tadgeeg.com"
-        },
-        {
-          "name": "1.png",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "**🚀 Hosting & Deployment**\nDeployed via GitHub Pages with custom domain configuration through Namecheap. Managed DNS, CNAME setup, and ensured optimized static asset delivery.\n\n---\n\n**📁 Tech Stack & Structure**\nUsed Flutter for frontend development. Structured assets, fonts, and web runtime files for scalable deployment. Leveraged `canvaskit` for high-performance rendering."
-        },
-        {
-          "name": "3.png",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "index": 11,
-      "title": "Hulla Flutter",
-      "category": "Frontend & Backend",
-      "date": "2.1.2022",
-      "folder": "11-Hulla Flutter (2-2.1.2022)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "# 📖 Hulla (حُـلَّـة)\n\n🌟 *A modern solution to organize and track Quran memorization for students and teachers.*\n\n---\n\n## ✨ About The Project\n\nKeeping track of Quran memorization progress in a college environment can be overwhelming 📚. Traditional methods like papers and spreadsheets are inefficient and error-prone 🧾❌. **Hulla** was created to solve this challenge by offering a digital, user-friendly experience."
-        },
-        {
-          "name": "1.png",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "👨‍🏫 **Teachers** can:\n\n* View student history\n* Filter by date 🗓️\n* Add/edit/delete records\n\n🧑‍🎓 **Students** can:\n\n* Track their own progress\n* Stay motivated and organized 💪\n\nThis app bridges the gap between spiritual growth and smart technology 💡🕌.\n\n---\n\n## 🚀 Features\n\n✅ Role-based views (Students 👨‍🎓 / Teachers 👩‍🏫)\n✅ Student selection dropdown 📋\n✅ Memorization record logging (Surah, Ayahs, Grade) 📖\n✅ Date range filtering for reports 🗂️\n✅ Full CRUD for memorization records ✍️\n✅ Cross-platform: Android 🤖, Web 🌐, Linux 🐧\n\n---\n\n## 🛠️ Built With\n\n* 🧩 **Flutter** – UI toolkit for multi-platform apps\n* 🧠 **Dart** – The language behind Flutter\n* 🔌 **http** – API integration\n* 📦 **flutter\\_bloc** – State management\n* 🕰️ **intl** – Date formatting\n\n---"
-        },
-        {
-          "name": "3.png",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "index": 12,
-      "title": "Swipe Squad",
-      "category": "Game Development",
-      "date": "10.3.2025",
-      "folder": "12-Swipe Squad (1-10.3.2025)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "### Crowd Runner Game – Level-Based Casual Mobile Game\n\n**Overview:**\nA fast-paced, level-based casual game where players control and grow a crowd of units as they move through an urban environment. The goal is to strategically navigate the path, gather new allies, and defeat opposing crowds in head-on clashes.\n\n**Features:**\n\n* Crowd growth mechanics and real-time group combat.\n* Simple, intuitive controls for mass movement.\n* Dynamic enemy encounters with scaling difficulty.\n* Clean, stylized 3D visuals optimized for mobile.\n* Level progression with coin-based scoring and resource collection."
-        },
-        {
-          "name": "1.png",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "**Tech Stack:**\nDeveloped in **Unity** with C# scripting and optimized for **1920x1080 portrait resolution**. Emphasis on performance, smooth animations, and visually engaging UI."
-        },
-        {
-          "name": "3.png",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "index": 13,
-      "title": "Duck Escape",
-      "category": "Game Development",
-      "date": "28.2.2025",
-      "folder": "13-Duck Escape (1-28.2.2025)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "# 🌊🐟 Game Overview\n\nDive into **a thrilling 3D endless runner** set in a vibrant aquatic world! 🌴🌊\nOutswim a **relentless shark 🦈** as you leap across floating debris, dodge dangerous obstacles, and survive the chaotic beauty of the open sea. 🌅\nFast-paced action meets clever movement in this adrenaline-fueled adventure! ⚡🎮"
-        },
-        {
-          "name": "1.png",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "# 🎮💡 Creative Game Mechanics\n\nExperience **gameplay with heart (literally!) ❤️👶** — your children act as your health bar!\nEvery hit costs you a family member, mixing laughs 😂 with real stakes 😱.\nFrom **sinking planks 🪵** to surprise hazards 🚧, no two runs are the same — it's strategic, emotional, and unforgettable!"
-        },
-        {
-          "name": "3.png",
-          "type": "image"
-        },
-        {
-          "name": "4.png",
-          "type": "image"
-        },
-        {
-          "name": "5.txt",
-          "type": "text",
-          "content": "# 🛠️🚀 Technical Achievement\n\nBuilt from scratch as a fully-optimized 3D endless runner 💻🏃‍♂️\n\n* 🌐 **Procedural obstacle generation** keeps the action fresh\n* 🎥 **Dynamic camera system** for cinematic chases\n* 🧠 **Advanced Shark AI** always keeps you on your fins\n* 🌊 **Custom physics + water FX** create a rich underwater vibe with smooth, responsive gameplay"
-        },
-        {
-          "name": "6.png",
-          "type": "image"
-        },
-        {
-          "name": "8.png",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "index": 14,
-      "title": "Words Food",
-      "category": "Game Development",
-      "date": "30.4.2022",
-      "folder": "14-Words Food (1-30.4.2022)",
-      "files": [
-        {
-          "name": "0.txt",
-          "type": "text",
-          "content": "# 📚 Kids Learning Game 🎮\n\nA fun and interactive Unity-based educational game designed to teach children letters, words, and everyday vocabulary through engaging visuals and intuitive gameplay. Perfect for preschool and early primary learners!"
-        },
-        {
-          "name": "1.png",
-          "type": "image"
-        },
-        {
-          "name": "2.txt",
-          "type": "text",
-          "content": "## 🧠 Game Concept\n\nThis game helps children:\n- Learn the alphabet 🅰️🅱️\n- Recognize and spell words 🧁🧀🍞\n- Build their vocabulary with visual aids 🖼️\n- Improve memory and word association\n\n## 🕹️ How to Play\n\n- Children are presented with colorful images of objects or food.\n- They must select the correct word that matches the image.\n- The game uses large buttons and simple UI for easy navigation.\n\nExample Activities:\n- Tap the correct name of a shown object (e.g., **bread**, **cheese**, **chicken**).\n- Progress through levels of increasing difficulty and vocabulary."
-        },
-        {
-          "name": "3.png",
-          "type": "image"
-        },
-        {
-          "name": "4.txt",
-          "type": "text",
-          "content": "## 🧩 Features\n\n- 👶 Kid-friendly interface and controls\n- 🔊 Audio feedback for correct/incorrect answers\n- 🖼️ Bright visuals and engaging images\n- 🏆 Progressive learning with levels and rewards\n\n## 🛠️ Tech Stack\n\n- **Engine:** Unity\n- **Language:** C#\n- **Platform:** Mobile (Android/iOS) and Desktop\n- **Target Audience:** Kids aged 3–7"
-        },
-        {
-          "name": "5.png",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "index": 15,
-      "title": "AL Marai",
-      "category": "Game Development",
-      "date": "1.5.2025",
-      "folder": "15-AL Marai (1-1.5.2025)",
-      "files": [
-        {
-          "name": "0.jpg",
-          "type": "image"
-        },
-        {
-          "name": "1.txt",
-          "type": "text",
-          "content": "**🎮 Interactive Educational Game Design**\nDeveloped a digital \"fill in the blanks\" game inspired by Hangman to promote Almarai Fresh Milk. The game challenges users to guess a unified phrase, reinforcing healthy habits through playful engagement."
-        },
-        {
-          "name": "2.jpg",
-          "type": "image"
-        },
-        {
-          "name": "3.png",
-          "type": "image"
-        },
-        {
-          "name": "4.txt",
-          "type": "text",
-          "content": "**🧠 Game Mechanics with Visual Feedback**\nEach correct letter pours milk into a virtual glass, providing instant visual and sound feedback. The glass fills up with each correct guess, while incorrect answers trigger humorous cow sounds and sad animations, enhancing user interaction."
-        },
-        {
-          "name": "5.jpg",
-          "type": "image"
-        },
-        {
-          "name": "6.txt",
-          "type": "text",
-          "content": "**🌍 Bilingual Experience & Brand Integration**\nThe app supports English and Arabic phrases (“Milk every day is the smart way” / \"شرب الحليب سر اللبيب\") to ensure wide accessibility. Visuals and audio are tightly integrated with Almarai’s branding to maximize engagement and recall."
-        },
-        {
-          "name": "7.jpg",
-          "type": "image"
-        }
-      ]
-    },
-    {
-      "id": 16,
-      "index": 16,
-      "title": "Chicken on a mission",
-      "category": "Game Development",
-      "date": "1.3.2021",
-      "folder": "16-Chicken on a mission (1-1.3.2021)",
-      "files": [
-        {
-          "name": "0.png",
-          "type": "image"
-        },
-        {
-          "name": "1.txt",
-          "type": "text",
-          "content": "# 🐔 Chicken On A Mission\n**Sack Escape** is a fast-paced 3D game where you play as a brave chicken trying to collect scattered sacks while dodging dangerous barbarians. The game takes place on a spherical world, and the chase never stops!"
-        },
-        {
-          "name": "2.png",
-          "type": "image"
-        },
-        {
-          "name": "3.png",
-          "type": "image"
-        },
-        {
-          "name": "4.txt",
-          "type": "text",
-          "content": "## 🎮 Game Concept\n\nYou're a determined chicken with one goal: collect all the sacks before the barbarians catch you. They're strong, fast, and relentless — but you're smarter, sneakier, and lighter on your claws.\n\n## 🧠 Vector-Based Movement\n\nThe core of the game’s mechanics is built around **vector calculations**. Everything — from chasing, escaping, to collecting items — is done using custom vector math. Here are a few highlights:\n\n* 🧭 The chicken always orients to walk on a spherical terrain. Movement is handled with smooth vector-based rotation and orientation.\n* 🏃 The player's movement isn't just “left” and “right” — it's defined by movement **relative to the planet's surface**, ensuring the character stays grounded in all directions.\n* 📡 Enemies detect and pursue the player using `Vector3.MoveTowards` and awake based on a calculated radius.\n* 🧲 Collectables and enemies respond to dynamic vectors, adjusting behavior as the player moves across the globe."
-        },
-        {
-          "name": "5.png",
-          "type": "image"
-        },
-        {
-          "name": "6.txt",
-          "type": "text",
-          "content": "## 🐔 Player Movement\n\nWe put a lot of effort into making movement *feel right*:\n\n* Smooth spherical gravity ensures your chicken hugs the planet surface at all times.\n* Directional movement works even when the \"up\" vector changes — thanks to world space vector projection.\n* The chicken can sprint, turn sharply, and react naturally to terrain curvature.\n\n## 🛡️ Features\n\n* 🎒 Sack collection with animation and sound feedback.\n* 🪓 Barbarians with detection zones and chase logic.\n* 🌍 A planet-based level that feels immersive and continuous.\n* 🧭 Optional minimap and sack indicators to help navigate.\n* ✨ Visual particles and feedback systems in the works."
-        },
-        {
-          "name": "7.png",
-          "type": "image"
-        },
-        {
-          "name": "8.txt",
-          "type": "text",
-          "content": "## 🔧 Known Issues (but they’re part of the charm!)\n\n* Moving directly across the planet may sometimes slow down due to the limitations of straight-line movement on curved space.\n* Win/Lose conditions are being refined for frame-accurate responsiveness.\n* Close encounters with enemies can feel abrupt (we're tuning the hit delay)."
-        }
-      ]
-    }
-  ]
+    ]
 </script>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <!-- Added Markdown parser library -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --primary-bg: #0a0a0a;
-      --secondary-bg: #1a1a1a;
-      --card-bg: #2a2a2a;
-      --accent-color: #6366f1;
-      --accent-hover: #4f46e5;
-      --text-primary: #ffffff;
-      --text-secondary: #a1a1aa;
-      --border-color: #3f3f46;
-      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--primary-bg);
-      color: var(--text-primary);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* Navigation */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(26, 26, 26, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      padding: 1rem 0;
-      transition: all 0.3s ease;
-    }
-
-    .nav-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 2rem;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      background: var(--gradient-1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-
-    .nav-link {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-      color: var(--text-primary);
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--gradient-1);
-      transition: width 0.3s ease;
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-      width: 100%;
-    }
-
-    /* Page Container */
-    .page {
-      display: none;
-      min-height: 100vh;
-      padding-top: 80px;
-    }
-
-    .page.active {
-      display: block;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Hero Section */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
-      position: relative;
-    }
-
-    .hero-content {
-      max-width: 800px;
-      padding: 2rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
-      margin-bottom: 1rem;
-      background: var(--gradient-1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: slideUp 1s ease-out;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-      animation: slideUp 1s ease-out 0.2s both;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: var(--gradient-1);
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      animation: slideUp 1s ease-out 0.4s both;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
-    }
-
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* Section */
-    .section {
-      padding: 4rem 0;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 3rem;
-      background: var(--gradient-2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* portfolio.html -> <style> */
-
-    /* Category Colors */
-    :root {
-      /* ... existing variables ... */
-      --ai-color: #6366f1;
-      /* Indigo */
-      --game-color: #ec4899;
-      /* Pink */
-      --frontend-color: #10b981;
-      /* Emerald */
-    }
-
-    /* Category Legend */
-    .category-legend {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-    }
-
-    .legend-color-box {
-      width: 15px;
-      height: 15px;
-      border-radius: 3px;
-    }
-
-    .legend-item[data-category="AI & Machine Learning"] .legend-color-box {
-      background-color: var(--ai-color);
-    }
-
-    .legend-item[data-category="Game Development"] .legend-color-box {
-      background-color: var(--game-color);
-    }
-
-    .legend-item[data-category="Frontend & Backend"] .legend-color-box {
-      background-color: var(--frontend-color);
-    }
-
-    /* Project Sorter */
-    .project-sorter {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 1rem;
-    }
-
-    #sort-projects {
-      background-color: var(--card-bg);
-      color: var(--text-primary);
-      border: 1px solid var(--border-color);
-      border-radius: 5px;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    #sort-projects:focus {
-      outline: none;
-      border-color: var(--accent-color);
-    }
-
-    /* Projects Grid */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    /* portfolio.html -> <style> */
-
-    .project-card {
-      background: var(--card-bg);
-      border-radius: 15px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      /* --- THIS IS WHERE YOU CONTROL THE BORDER --- */
-      border-style: solid;
-      border-width: 4px;
-      /* <-- Control the thickness here! (e.g., 1px, 2px, 3px) */
-    }
-
-    /* Set the default border color for each category */
-    .project-card[data-category="AI & Machine Learning"] {
-      border-color: var(--ai-color);
-    }
-
-    .project-card[data-category="Game Development"] {
-      border-color: var(--game-color);
-    }
-
-    .project-card[data-category="Frontend & Backend"] {
-      border-color: var(--frontend-color);
-    }
-
-    .project-card[data-category="Uncategorized"] {
-      border-color: var(--border-color);
-      /* Fallback for uncategorized projects */
-    }
-
-
-    /* Keep the hover effect for interactivity */
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Optional: Brighten the border color slightly on hover */
-    .project-card[data-category="AI & Machine Learning"]:hover {
-      border-color: #818cf8;
-      /* A lighter shade of indigo */
-    }
-
-    .project-card[data-category="Game Development"]:hover {
-      border-color: #f472b6;
-      /* A lighter shade of pink */
-    }
-
-    .project-card[data-category="Frontend & Backend"]:hover {
-      border-color: #34d399;
-      /* A lighter shade of emerald */
-    }
-
-    .project-image {
-      width: 100%;
-      height: 200px;
-      background: var(--gradient-3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover .project-image img {
-      transform: scale(1.1);
-    }
-
-    .project-info {
-      padding: 1.5rem;
-    }
-
-    .project-title {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-      text-transform: capitalize;
-    }
-
-    .project-description {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-
-    /* View All Button */
-    .view-all-btn {
-      display: block;
-      width: fit-content;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      background: transparent;
-      color: var(--accent-color);
-      border: 2px solid var(--accent-color);
-      border-radius: 50px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .view-all-btn:hover {
-      background: var(--accent-color);
-      color: white;
-      transform: translateY(-2px);
-    }
-
-    /* Project Detail */
-    .project-detail {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .project-detail-title {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      text-align: center;
-      text-transform: capitalize;
-      background: var(--gradient-1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .project-content {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .project-content img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .project-content img:hover {
-      transform: scale(1.02);
-    }
-
-    .project-content .text-content {
-      background: var(--card-bg);
-      padding: 2rem;
-      border-radius: 10px;
-      border-left: 4px solid var(--accent-color);
-      color: var(--text-secondary);
-      /* Base text color */
-    }
-
-    /* Styles for Markdown content */
-    .project-content .text-content h1,
-    .project-content .text-content h2,
-    .project-content .text-content h3 {
-      color: var(--text-primary);
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .project-content .text-content p {
-      margin-bottom: 1rem;
-      line-height: 1.7;
-    }
-
-    .project-content .text-content a {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px dotted var(--accent-color);
-      transition: color 0.3s ease;
-    }
-
-    .project-content .text-content a:hover {
-      color: var(--accent-hover);
-    }
-
-    .project-content .text-content ul,
-    .project-content .text-content ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .project-content .text-content li {
-      margin-bottom: 0.5rem;
-    }
-
-    .project-content .text-content blockquote {
-      border-left: 4px solid var(--border-color);
-      padding-left: 1rem;
-      margin: 1rem 0;
-      font-style: italic;
-      color: var(--text-primary);
-    }
-
-    .project-content .text-content code {
-      background: var(--primary-bg);
-      padding: 0.2rem 0.4rem;
-      border-radius: 5px;
-      font-family: 'Courier New', Courier, monospace;
-    }
-
-
-    /* Back Button */
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: var(--card-bg);
-      color: var(--text-primary);
-      text-decoration: none;
-      border-radius: 25px;
-      transition: all 0.3s ease;
-      margin-bottom: 2rem;
-    }
-
-    .back-btn:hover {
-      background: var(--accent-color);
-      transform: translateX(-5px);
-    }
-
-    /* About Section */
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    /* This is the container for the image */
-    .profile-image {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      margin: 0 auto;
-      overflow: hidden;
-      /* This hides any parts of the image that might spill out */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      /* Optional: adds a nice shadow */
-    }
-
-    /* This styles the actual image inside the container */
-    .profile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* This is the magic part! */
-    }
-
-    .about-text {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: var(--text-secondary);
-    }
-
-    /* Loading Animation */
-    .loading {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 3px solid var(--border-color);
-      border-radius: 50%;
-      border-top-color: var(--accent-color);
-      animation: spin 1s ease-in-out infinite;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-content {
-        padding: 0 1rem;
-      }
-
-      .nav-menu {
-        gap: 1rem;
-      }
-
-      .hero h1 {
-        font-size: 3rem;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .profile-image {
-        width: 200px;
-        height: 200px;
-      }
-    }
-
-    /* Error State */
-    .error-message {
-      text-align: center;
-      color: var(--text-secondary);
-      padding: 2rem;
-      background: var(--card-bg);
-      border-radius: 10px;
-      margin: 2rem 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Added Markdown parser library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #1a1a1a;
+            --card-bg: #2a2a2a;
+            --accent-color: #6366f1;
+            --accent-hover: #4f46e5;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --border-color: #3f3f46;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--text-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Page Container */
+        .page {
+            display: none;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+
+        .page.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            margin-bottom: 1rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            animation: slideUp 1s ease-out 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            animation: slideUp 1s ease-out 0.4s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* --- NEW --- Category Cards */
+        :root {
+            /* ... existing variables ... */
+            --ai-color: #6366f1;
+            /* Indigo */
+            --game-color: #ec4899;
+            /* Pink */
+            --frontend-color: #10b981;
+            /* Emerald */
+        }
+
+        .category-cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 5px solid;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card[data-category="AI & Machine Learning"] {
+            border-color: var(--ai-color);
+        }
+
+        .category-card[data-category="Game Development"] {
+            border-color: var(--game-color);
+        }
+
+        .category-card[data-category="Frontend & Backend"] {
+            border-color: var(--frontend-color);
+        }
+
+        .category-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .category-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+
+        /* Project Sorter */
+        .project-sorter {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1rem;
+        }
+
+        #sort-projects {
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #sort-projects:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-style: solid;
+            border-width: 4px;
+        }
+
+        /* Set the default border color for each category */
+        .project-card[data-category="AI & Machine Learning"] {
+            border-color: var(--ai-color);
+        }
+
+        .project-card[data-category="Game Development"] {
+            border-color: var(--game-color);
+        }
+
+        .project-card[data-category="Frontend & Backend"] {
+            border-color: var(--frontend-color);
+        }
+
+        .project-card[data-category="Uncategorized"] {
+            border-color: var(--border-color);
+        }
+
+
+        /* Keep the hover effect for interactivity */
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Optional: Brighten the border color slightly on hover */
+        .project-card[data-category="AI & Machine Learning"]:hover {
+            border-color: #818cf8;
+        }
+
+        .project-card[data-category="Game Development"]:hover {
+            border-color: #f472b6;
+        }
+
+        .project-card[data-category="Frontend & Backend"]:hover {
+            border-color: #34d399;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            text-transform: capitalize;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* View All Button */
+        .view-all-btn {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            background: transparent;
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .view-all-btn:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Project Detail */
+        .project-detail {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .project-detail-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            text-transform: capitalize;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .project-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .project-content img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .project-content img:hover {
+            transform: scale(1.02);
+        }
+
+        .project-content .text-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+            color: var(--text-secondary);
+        }
+
+        /* Styles for Markdown content */
+        .project-content .text-content h1,
+        .project-content .text-content h2,
+        .project-content .text-content h3 {
+            color: var(--text-primary);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-content .text-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .project-content .text-content a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--accent-color);
+            transition: color 0.3s ease;
+        }
+
+        .project-content .text-content a:hover {
+            color: var(--accent-hover);
+        }
+
+        .project-content .text-content ul,
+        .project-content .text-content ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-content .text-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-content .text-content blockquote {
+            border-left: 4px solid var(--border-color);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
+        .project-content .text-content code {
+            background: var(--primary-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+
+        /* Back Button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .back-btn:hover {
+            background: var(--accent-color);
+            transform: translateX(-5px);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid var(--border-color);
+            border-radius: 50%;
+            border-top-color: var(--accent-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-content {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* Error State */
+        .error-message {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-content">
-      <div class="logo">Portfolio</div>
-      <ul class="nav-menu">
-        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-        <li><a href="#" class="nav-link" data-page="about">About</a></li>
-        <li><a href="#" class="nav-link" data-page="projects">Projects</a></li>
-        <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
-      </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                <li><a href="#" class="nav-link" data-page="projects">Projects</a></li>
+                <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Monzir Hafez</h1>
+                <p>Full Stack Developer & Creative Problem Solver</p>
+                <a href="#" class="cta-button" data-page="projects">View My Work</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+
+                <!-- --- NEW --- Category Cards on Home Page -->
+                <div class="category-cards-container">
+                    <div class="category-card" data-category="AI & Machine Learning">
+                        <h3>🤖 AI & Machine Learning</h3>
+                        <p>Intelligent systems, data-driven models, and automation.</p>
+                    </div>
+                    <div class="category-card" data-category="Game Development">
+                        <h3>🎮 Game Development</h3>
+                        <p>Interactive experiences, AR, and creative simulations.</p>
+                    </div>
+                    <div class="category-card" data-category="Frontend & Backend">
+                        <h3>🌐 Frontend & Backend</h3>
+                        <p>Full-stack web apps, APIs, and robust digital solutions.</p>
+                    </div>
+                </div>
+
+                <div id="featured-projects" class="projects-grid">
+                    <div class="loading"></div>
+                </div>
+                <a href="#" class="view-all-btn" data-page="projects">View All Projects</a>
+            </div>
+        </section>
     </div>
-  </nav>
 
-  <!-- Home Page -->
-  <div id="home" class="page active">
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Monzir Hafez</h1>
-        <p>Full Stack Developer & Creative Problem Solver</p>
-        <a href="#" class="cta-button" data-page="projects">View My Work</a>
-      </div>
-    </section>
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="profile-image">
+                        <img src="me.jpg" alt="Monzir">
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            I’m Monzir, a soon-to-be AI Engineer with a knack for solving problems across all kinds of
+                            software domains. My skills aren’t built on years of repetition—they’re built on fast
+                            learning, sharp thinking, and a borderline unhealthy curiosity. I thrive in team
+                            environments, learn at ridiculous speed (yes, faster than you’re imagining), and love
+                            turning messy ideas into working systems. If it’s broken, I’ll fix it. If it’s not, I’ll
+                            probably upgrade it anyway.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="category-legend">
-          <div class="legend-item" data-category="AI & Machine Learning">
-            <div class="legend-color-box"></div>
-            <span>AI & Machine Learning</span>
-          </div>
-          <div class="legend-item" data-category="Game Development">
-            <div class="legend-color-box"></div>
-            <span>Game Development</span>
-          </div>
-          <div class="legend-item" data-category="Frontend & Backend">
-            <div class="legend-color-box"></div>
-            <span>Frontend & Backend</span>
-          </div>
-        </div>
+    <!-- Projects Page -->
+    <div id="projects" class="page">
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">All Projects</h2>
+                <div class="project-sorter">
+                    <select id="sort-projects">
+                        <option value="monzir">Sort by: Monzir Order</option>
+                        <option value="date">Sort by: Date (Newest)</option>
+                        <option value="category">Sort by: Category</option>
+                    </select>
+                </div>
 
-        <div id="featured-projects" class="projects-grid">
-          <div class="loading"></div>
-        </div>
-        <!-- ... -->
-        <div id="featured-projects" class="projects-grid">
-          <div class="loading"></div>
-        </div>
-        <a href="#" class="view-all-btn" data-page="projects">View All Projects</a>
-      </div>
-    </section>
-  </div>
+                <!-- --- NEW --- Category Cards on Projects Page -->
+                <div class="category-cards-container">
+                    <div class="category-card" data-category="AI & Machine Learning">
+                        <h3>🤖 AI & Machine Learning</h3>
+                        <p>Jump to AI projects.</p>
+                    </div>
+                    <div class="category-card" data-category="Game Development">
+                        <h3>🎮 Game Development</h3>
+                        <p>Jump to Game Dev projects.</p>
+                    </div>
+                    <div class="category-card" data-category="Frontend & Backend">
+                        <h3>🌐 Frontend & Backend</h3>
+                        <p>Jump to Web projects.</p>
+                    </div>
+                </div>
 
-  <!-- About Page -->
-  <div id="about" class="page">
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-          <div class="profile-image">
-            <img src="me.jpg" alt="Monzir">
-          </div>
-          <div class="about-text">
-            <p>Hello! I'm a passionate developer with a love for creating innovative solutions and beautiful user
-              experiences. With expertise in multiple programming languages and frameworks, I enjoy tackling challenging
-              problems and bringing ideas to life.</p>
-            <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
-              sharing knowledge with the developer community.</p>
-            <p>Feel free to reach out if you'd like to collaborate on a project or just want to chat about technology!
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+                <div id="all-projects" class="projects-grid">
+                    <div class="loading"></div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-  <!-- Projects Page -->
-  <div id="projects" class="page">
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">All Projects</h2>
-        <div class="project-sorter">
-          <select id="sort-projects">
-            <option value="monzir">Sort by: Monzir Order</option>
-            <option value="date">Sort by: Date (Newest)</option>
-            <option value="category">Sort by: Category</option>
-          </select>
-        </div>
-        <div class="category-legend">
-          <div class="legend-item" data-category="AI & Machine Learning">
-            <div class="legend-color-box"></div>
-            <span>AI & Machine Learning</span>
-          </div>
-          <div class="legend-item" data-category="Game Development">
-            <div class="legend-color-box"></div>
-            <span>Game Development</span>
-          </div>
-          <div class="legend-item" data-category="Frontend & Backend">
-            <div class="legend-color-box"></div>
-            <span>Frontend & Backend</span>
-          </div>
-        </div>
+    <!-- Project Detail Page -->
+    <div id="project-detail" class="page">
+        <section class="section">
+            <div class="container">
+                <div class="project-detail">
+                    <a href="#" class="back-btn" data-page="projects">
+                        ← Back to Projects
+                    </a>
+                    <h2 id="project-detail-title" class="project-detail-title">Project Title</h2>
+                    <div id="project-detail-content" class="project-content">
+                        <div class="loading"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-        <div id="all-projects" class="projects-grid">
-          <div class="loading"></div>
-        </div>
-        <!-- ... -->
-        <div id="all-projects" class="projects-grid">
-          <div class="loading"></div>
-        </div>
-      </div>
-    </section>
-  </div>
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">
+                        I'm always interested in hearing about new opportunities and interesting projects.
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                        <a href="mailto:your.email@example.com" class="cta-button">Email Me</a>
+                        <a href="https://linkedin.com/in/yourprofile" class="cta-button">LinkedIn</a>
+                        <a href="https://github.com/yourusername" class="cta-button">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-  <!-- Project Detail Page -->
-  <div id="project-detail" class="page">
-    <section class="section">
-      <div class="container">
-        <div class="project-detail">
-          <a href="#" class="back-btn" data-page="projects">
-            ← Back to Projects
-          </a>
-          <h2 id="project-detail-title" class="project-detail-title">Project Title</h2>
-          <div id="project-detail-content" class="project-content">
-            <div class="loading"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Contact Page -->
-  <div id="contact" class="page">
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-          <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">
-            I'm always interested in hearing about new opportunities and interesting projects.
-          </p>
-          <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-            <a href="mailto:your.email@example.com" class="cta-button">Email Me</a>
-            <a href="https://linkedin.com/in/yourprofile" class="cta-button">LinkedIn</a>
-            <a href="https://github.com/yourusername" class="cta-button">GitHub</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <script>
-    class Portfolio {
-      constructor() {
-        this.projects = [];
-        this.originalOrder = []; // Store the original order
-        this.featuredProjectsCount = 6; // Increased to show more variety
-        this.currentPage = 'home';
-        this.init();
-      }
-
-      async init() {
-        this.setupNavigation();
-        await this.loadProjects();
-
-        this.originalOrder = [...this.projects]; // Save the initial order
-
-        this.renderFeaturedProjects();
-        this.renderAllProjects();
-
-        // Setup the sorter
-        const sorter = document.getElementById('sort-projects');
-        if (sorter) {
-          sorter.addEventListener('change', (e) => this.sortProjects(e.target.value));
-        }
-      }
-
-      setupNavigation() {
-        const navLinks = document.querySelectorAll('.nav-link');
-        const ctaButtons = document.querySelectorAll('[data-page]');
-
-        [...navLinks, ...ctaButtons].forEach(link => {
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const page = e.target.getAttribute('data-page');
-            if (page) {
-              this.navigateToPage(page);
+    <script>
+        class Portfolio {
+            constructor() {
+                this.projects = [];
+                this.originalOrder = [];
+                this.featuredProjectsCount = 6;
+                this.currentPage = 'home';
+                this.init();
             }
-          });
-        });
-      }
 
-      navigateToPage(page) {
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        document.getElementById(page).classList.add('active');
-        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-        document.querySelector(`.nav-link[data-page="${page}"]`)?.classList.add('active');
-        this.currentPage = page;
-        window.scrollTo(0, 0);
-      }
+            async init() {
+                this.setupNavigation();
+                this.setupCategoryCardNavigation(); // --- NEW ---
+                await this.loadProjects();
 
-      async loadProjects() {
-        // This part is for the automated deployment with GitHub Actions. 
-        // If you are still pasting the JSON, this will work fine.
-        try {
-          // If projects_json is defined, use it. Otherwise, fetch.
-          if (typeof projects_json !== 'undefined') {
-            this.projects = projects_json;
-          } else {
-            const response = await fetch('projects.json');
-            this.projects = await response.json();
-          }
-        } catch (error) {
-          console.error("Could not load projects:", error);
-        }
-      }
+                this.originalOrder = [...this.projects];
 
-      renderFeaturedProjects() {
-        const container = document.getElementById('featured-projects');
-        if (!container) return;
+                this.renderFeaturedProjects();
+                this.renderAllProjects();
 
-        const featuredProjects = this.projects.slice(0, this.featuredProjectsCount);
+                const sorter = document.getElementById('sort-projects');
+                if (sorter) {
+                    sorter.addEventListener('change', (e) => this.sortProjects(e.target.value));
+                }
+            }
 
-        container.innerHTML = '';
+            setupNavigation() {
+                const navLinks = document.querySelectorAll('.nav-link');
+                const ctaButtons = document.querySelectorAll('.cta-button[data-page], .view-all-btn[data-page], .back-btn[data-page]');
 
-        if (featuredProjects.length === 0) {
-          container.innerHTML = '<div class="error-message">No projects found.</div>';
-          return;
-        }
+                [...navLinks, ...ctaButtons].forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const page = e.target.closest('[data-page]').getAttribute('data-page');
+                        if (page) {
+                            this.navigateToPage(page);
+                        }
+                    });
+                });
+            }
 
-        featuredProjects.forEach(project => {
-          const projectCard = this.createProjectCard(project);
-          container.appendChild(projectCard);
-        });
-      }
+            // --- NEW --- Setup for the interactive category cards
+            setupCategoryCardNavigation() {
+                const categoryCards = document.querySelectorAll('.category-card');
+                categoryCards.forEach(card => {
+                    card.addEventListener('click', () => {
+                        const category = card.dataset.category;
 
-      renderAllProjects() {
-        const container = document.getElementById('all-projects');
-        if (!container) return;
+                        // 1. Navigate to the projects page if not already there
+                        if (this.currentPage !== 'projects') {
+                            this.navigateToPage('projects');
+                        }
 
-        container.innerHTML = '';
+                        // 2. Find the target project and scroll to it
+                        // A small delay ensures the page is visible before scrolling
+                        setTimeout(() => {
+                            const projectGrid = document.getElementById('all-projects');
+                            const targetProject = projectGrid.querySelector(`.project-card[data-category="${category}"]`);
 
-        if (this.projects.length === 0) {
-          container.innerHTML = '<div class="error-message">No projects found.</div>';
-          return;
-        }
+                            if (targetProject) {
+                                targetProject.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'center' // This centers the element in the viewport
+                                });
+                            }
+                        }, 100);
+                    });
+                });
+            }
 
-        // The 'this.projects' array might be sorted, so we just render it.
-        this.projects.forEach(project => {
-          const projectCard = this.createProjectCard(project);
-          container.appendChild(projectCard);
-        });
-      }
 
-      createProjectCard(project) {
-        const card = document.createElement('div');
-        card.className = 'project-card';
-        card.addEventListener('click', () => this.showProjectDetail(project));
+            navigateToPage(page) {
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.getElementById(page).classList.add('active');
+                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                document.querySelector(`.nav-link[data-page="${page}"]`)?.classList.add('active');
+                this.currentPage = page;
+                window.scrollTo(0, 0);
+            }
 
-        // Link the card to its category color
-        card.dataset.category = project.category;
+            async loadProjects() {
+                try {
+                    if (typeof projects_json !== 'undefined') {
+                        this.projects = projects_json;
+                    } else {
+                        const response = await fetch('projects.json');
+                        this.projects = await response.json();
+                    }
+                } catch (error) {
+                    console.error("Could not load projects:", error);
+                }
+            }
 
-        const firstImage = project.files.find(file => file.type === 'image');
+            renderFeaturedProjects() {
+                const container = document.getElementById('featured-projects');
+                if (!container) return;
 
-        card.innerHTML = `
+                const featuredProjects = this.projects.slice(0, this.featuredProjectsCount);
+
+                container.innerHTML = '';
+
+                if (featuredProjects.length === 0) {
+                    container.innerHTML = '<div class="error-message">No projects found.</div>';
+                    return;
+                }
+
+                featuredProjects.forEach(project => {
+                    const projectCard = this.createProjectCard(project);
+                    container.appendChild(projectCard);
+                });
+            }
+
+            renderAllProjects() {
+                const container = document.getElementById('all-projects');
+                if (!container) return;
+
+                container.innerHTML = '';
+
+                if (this.projects.length === 0) {
+                    container.innerHTML = '<div class="error-message">No projects found.</div>';
+                    return;
+                }
+
+                this.projects.forEach(project => {
+                    const projectCard = this.createProjectCard(project);
+                    container.appendChild(projectCard);
+                });
+            }
+
+            createProjectCard(project) {
+                const card = document.createElement('div');
+                card.className = 'project-card';
+                card.addEventListener('click', () => this.showProjectDetail(project));
+                card.dataset.category = project.category;
+
+                const firstImage = project.files.find(file => file.type === 'image');
+
+                card.innerHTML = `
                     <div class="project-image">
                         ${firstImage ?
-            `<img src="projects/${project.folder}/${firstImage.name}" alt="${project.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';">` :
-            '🖼️'
-          }
+                        `<img src="projects/${project.folder}/${firstImage.name}" alt="${project.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';">` :
+                        '🖼️'
+                    }
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">${project.title}</h3>
@@ -1485,80 +1500,74 @@
                     </div>
                 `;
 
-        return card;
-      }
-
-      showProjectDetail(project) {
-        const titleElement = document.getElementById('project-detail-title');
-        const contentElement = document.getElementById('project-detail-content');
-
-        if (titleElement) {
-          titleElement.textContent = project.title.replace(/^\d+-/, '').replace(/-/g, ' ');
-        }
-
-        if (contentElement) {
-          contentElement.innerHTML = '';
-
-          project.files.forEach(file => {
-            if (file.type === 'image') {
-              const img = document.createElement('img');
-              img.src = `projects/${project.folder}/${file.name}`;
-              img.alt = `${project.title} - ${file.name}`;
-              img.onerror = function () { this.style.display = 'none'; };
-              contentElement.appendChild(img);
-            } else if (file.type === 'text') {
-              const textDiv = document.createElement('div');
-              textDiv.className = 'text-content';
-              // Use marked.parse() to convert Markdown to HTML
-              if (typeof marked !== 'undefined' && marked.parse) {
-                textDiv.innerHTML = marked.parse(file.content);
-              } else {
-                textDiv.textContent = file.content;
-              }
-              contentElement.appendChild(textDiv);
+                return card;
             }
-          });
+
+            showProjectDetail(project) {
+                const titleElement = document.getElementById('project-detail-title');
+                const contentElement = document.getElementById('project-detail-content');
+
+                if (titleElement) {
+                    titleElement.textContent = project.title.replace(/^\d+-/, '').replace(/-/g, ' ');
+                }
+
+                if (contentElement) {
+                    contentElement.innerHTML = '';
+
+                    project.files.forEach(file => {
+                        if (file.type === 'image') {
+                            const img = document.createElement('img');
+                            img.src = `projects/${project.folder}/${file.name}`;
+                            img.alt = `${project.title} - ${file.name}`;
+                            img.onerror = function () { this.style.display = 'none'; };
+                            contentElement.appendChild(img);
+                        } else if (file.type === 'text') {
+                            const textDiv = document.createElement('div');
+                            textDiv.className = 'text-content';
+                            if (typeof marked !== 'undefined' && marked.parse) {
+                                textDiv.innerHTML = marked.parse(file.content);
+                            } else {
+                                textDiv.textContent = file.content;
+                            }
+                            contentElement.appendChild(textDiv);
+                        }
+                    });
+                }
+
+                this.navigateToPage('project-detail');
+            }
+
+            sortProjects(sortBy) {
+                switch (sortBy) {
+                    case 'date':
+                        this.projects.sort((a, b) => new Date(b.date) - new Date(a.date));
+                        break;
+                    case 'category':
+                        this.projects.sort((a, b) => {
+                            if (a.category < b.category) return -1;
+                            if (a.category > b.category) return 1;
+                            return new Date(b.date) - new Date(a.date);
+                        });
+                        break;
+                    case 'monzir':
+                    default:
+                        this.projects = [...this.originalOrder];
+                        break;
+                }
+                this.renderAllProjects();
+            }
         }
 
-        this.navigateToPage('project-detail');
-      }
+        document.addEventListener('DOMContentLoaded', () => {
+            new Portfolio();
+        });
 
-      // New sorting method
-      sortProjects(sortBy) {
-        switch (sortBy) {
-          case 'date':
-            // Sort by date, newest first
-            this.projects.sort((a, b) => new Date(b.date) - new Date(a.date));
-            break;
-          case 'category':
-            // Sort alphabetically by category, then by date within each category
-            this.projects.sort((a, b) => {
-              if (a.category < b.category) return -1;
-              if (a.category > b.category) return 1;
-              return new Date(b.date) - new Date(a.date); // Secondary sort by date
-            });
-            break;
-          case 'monzir':
-          default:
-            // Restore the original order
-            this.projects = [...this.originalOrder];
-            break;
-        }
-        // Re-render the project grid with the sorted array
-        this.renderAllProjects();
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      new Portfolio();
-    });
-
-    function createParticles() {
-      const hero = document.querySelector('.hero');
-      if (!hero) return;
-      for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.style.cssText = `
+        function createParticles() {
+            const hero = document.querySelector('.hero');
+            if (!hero) return;
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
                     position: absolute;
                     width: 2px;
                     height: 2px;
@@ -1570,21 +1579,21 @@
                     animation-delay: ${Math.random() * 2}s;
                     pointer-events: none;
                 `;
-        hero.appendChild(particle);
-      }
-    }
+                hero.appendChild(particle);
+            }
+        }
 
-    const style = document.createElement('style');
-    style.textContent = `
+        const style = document.createElement('style');
+        style.textContent = `
             @keyframes float {
                 0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
                 50% { transform: translateY(-20px) rotate(180deg); opacity: 0.5; }
             }
         `;
-    document.head.appendChild(style);
+        document.head.appendChild(style);
 
-    window.addEventListener('load', createParticles);
-  </script>
+        window.addEventListener('load', createParticles);
+    </script>
 </body>
 
 </html>

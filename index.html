@@ -1,4 +1,5 @@
 <script>
+    // Project data is now embedded directly in the HTML
     projects_json = [
         {
             "id": 1,
@@ -79,14 +80,18 @@
                 {
                     "name": "5.txt",
                     "type": "text",
-                    "content": "## 🧠 Training Details\n\n- **Dataset:** [Flickr-Faces-HQ (FFHQ)](https://github.com/NVlabs/ffhq)\n  - 70,000 high-quality face images\n  - Preprocessed to simulate passport-like degradation (e.g., compression, resizing, blur)\n\n- **Training Platform:** Google Colab\n  - Used TPU/High-RAM runtime\n  - Mixed precision training with PyTorch + CUDA\n  - Custom augmentations and passport-style degradations applied on-the-fly\n\n- **Loss Functions:**\n  - Pixel Loss (L1)\n  - Perceptual Loss (VGG-based)\n  - Adversarial Loss (GAN Discriminator)\n  - Identity Loss (optional; based on ArcFace embeddings)"
+                    "content": "## 🧠 Training Details\n\n- **Dataset:** [Flickr-Faces-HQ (FFHQ)](https://github.com/NVlabs/ffhq)\n  - 70,000 high-quality face images\n  - Preprocessed to simulate passport-like degradation (e.g., compression, resizing, blur)\n\n- **Training Platform:** Google Colab\n  - Used TPU/High-RAM runtime\n  - Mixed precision training with PyTorch + CUDA\n  - Custom augmentations and passport-style degradations applied on-the-fly\n\n- **Loss Functions:**\n  - Pixel Loss (L1)\n  - Perceptual Loss (VGG-based)\n  - Adversarial Loss (GAN Discriminator)\n  - Identity Loss (optional; based on ArcFace embeddings)\n\n- **I even Tried it on a far photo of mine lol**"
                 },
                 {
-                    "name": "6.png",
+                    "name": "6.jpg",
                     "type": "image"
                 },
                 {
-                    "name": "7.png",
+                    "name": "7.jpg",
+                    "type": "image"
+                },
+                {
+                    "name": "8.png",
                     "type": "image"
                 }
             ]
@@ -608,6 +613,8 @@
     <title>My Portfolio</title>
     <!-- Added Markdown parser library -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Added Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -636,6 +643,24 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
+
+        /* Background Slideshow */
+        .background-slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .background-slideshow img {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+        }
+
 
         /* Navigation */
         .navbar {
@@ -809,7 +834,7 @@
             background-clip: text;
         }
 
-        /* --- NEW --- Category Cards */
+        /* Category Cards */
         :root {
             /* ... existing variables ... */
             --ai-color: #6366f1;
@@ -903,7 +928,10 @@
             cursor: pointer;
             border-style: solid;
             border-width: 4px;
+            /* Opacity transition for scroll effect */
+            transition: opacity 0.5s ease-out, transform 0.3s ease;
         }
+
 
         /* Set the default border color for each category */
         .project-card[data-category="AI & Machine Learning"] {
@@ -1144,6 +1172,52 @@
             color: var(--text-secondary);
         }
 
+        /* Contact Section Enhancement */
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .contact-option {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 250px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .contact-option:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: var(--secondary-bg);
+        }
+
+        .contact-option i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-option h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-option p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+
         /* Loading Animation */
         .loading {
             display: inline-block;
@@ -1163,6 +1237,10 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
             .nav-content {
                 padding: 0 1rem;
             }
@@ -1188,6 +1266,16 @@
                 width: 200px;
                 height: 200px;
             }
+
+            /* --- FIX --- Mobile padding for project detail text */
+            .project-detail {
+                padding: 1rem;
+            }
+
+            .project-content .text-content {
+                padding: 1.5rem 1rem;
+                /* Reduced horizontal padding */
+            }
         }
 
         /* Error State */
@@ -1203,6 +1291,9 @@
 </head>
 
 <body>
+    <!-- Background Slideshow -->
+    <div class="background-slideshow"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-content">
@@ -1223,6 +1314,8 @@
                 <h1>Monzir Hafez</h1>
                 <p>AI Engineer & Full-Stack Problem Solver</p>
                 <a href="#" class="cta-button" data-page="projects">View My Work</a>
+                <!-- Contact Me Button -->
+                <a href="#" class="cta-button" data-page="contact" style="margin-left: 1rem;">Contact Me</a>
             </div>
         </section>
 
@@ -1230,7 +1323,7 @@
             <div class="container">
                 <h2 class="section-title">Featured Projects</h2>
 
-                <!-- --- NEW --- Category Cards on Home Page -->
+                <!-- Category Cards on Home Page -->
                 <div class="category-cards-container">
                     <div class="category-card" data-category="AI & Machine Learning">
                         <h3>🤖 AI & Machine Learning</h3>
@@ -1291,7 +1384,7 @@
                     </select>
                 </div>
 
-                <!-- --- NEW --- Category Cards on Projects Page -->
+                <!-- Category Cards on Projects Page -->
                 <div class="category-cards-container">
                     <div class="category-card" data-category="AI & Machine Learning">
                         <h3>🤖 AI & Machine Learning</h3>
@@ -1338,17 +1431,31 @@
                 <h2 class="section-title">Get In Touch</h2>
                 <div style="text-align: center; max-width: 600px; margin: 0 auto;">
                     <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">
-                        I'm always interested in hearing about new opportunities and interesting projects.
+                        Have an idea, a project, or just want to say hi? Here’s how you can reach me. Let's build
+                        something amazing together!
                     </p>
-                   <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-    <a href="mailto:muntherhafiz474@gmail.com" class="cta-button" target="_blank">Email Me</a>
-    <a href="https://linkedin.com/in/monzir-hafez-7b5923153" class="cta-button" target="_blank">LinkedIn</a>
-    <a href="https://github.com/abualmun" class="cta-button" target="_blank">GitHub</a>
-</div>
+                </div>
+                <div class="contact-options">
+                    <a href="mailto:muntherhafiz474@gmail.com" class="contact-option" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Me</h3>
+                        <p>The direct line. Best for formal inquiries and detailed discussions.</p>
+                    </a>
+                    <a href="https://linkedin.com/in/monzir-hafez-7b5923153" class="contact-option" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally. Let's talk careers and collaborations.</p>
+                    </a>
+                    <a href="https://github.com/abualmun" class="contact-option" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p>See my code in the wild. Fork, star, or follow my latest projects.</p>
+                    </a>
                 </div>
             </div>
         </section>
     </div>
+
 
     <script>
         class Portfolio {
@@ -1357,15 +1464,24 @@
                 this.originalOrder = [];
                 this.featuredProjectsCount = 6;
                 this.currentPage = 'home';
+                this.pageOrder = ['home', 'about', 'projects', 'contact'];
+                this.touchStartX = 0;
+                this.touchEndX = 0;
+                this.projectImages = [];
                 this.init();
             }
 
             async init() {
                 this.setupNavigation();
-                this.setupCategoryCardNavigation(); // --- NEW ---
-                await this.loadProjects();
+                this.setupCategoryCardNavigation();
+                this.setupSwipeNavigation();
+                this.setupProjectCardObserver();
 
+                // This will now use the 'projects_json' variable defined at the top of the file.
+                await this.loadProjects();
                 this.originalOrder = [...this.projects];
+                this.collectProjectImages();
+                this.startBackgroundSlideshow();
 
                 this.renderFeaturedProjects();
                 this.renderAllProjects();
@@ -1391,20 +1507,16 @@
                 });
             }
 
-            // --- NEW --- Setup for the interactive category cards
             setupCategoryCardNavigation() {
                 const categoryCards = document.querySelectorAll('.category-card');
                 categoryCards.forEach(card => {
                     card.addEventListener('click', () => {
                         const category = card.dataset.category;
 
-                        // 1. Navigate to the projects page if not already there
                         if (this.currentPage !== 'projects') {
                             this.navigateToPage('projects');
                         }
 
-                        // 2. Find the target project and scroll to it
-                        // A small delay ensures the page is visible before scrolling
                         setTimeout(() => {
                             const projectGrid = document.getElementById('all-projects');
                             const targetProject = projectGrid.querySelector(`.project-card[data-category="${category}"]`);
@@ -1412,7 +1524,7 @@
                             if (targetProject) {
                                 targetProject.scrollIntoView({
                                     behavior: 'smooth',
-                                    block: 'center' // This centers the element in the viewport
+                                    block: 'center'
                                 });
                             }
                         }, 100);
@@ -1420,12 +1532,127 @@
                 });
             }
 
+            setupSwipeNavigation() {
+                document.body.addEventListener('touchstart', e => {
+                    this.touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                document.body.addEventListener('touchend', e => {
+                    this.touchEndX = e.changedTouches[0].screenX;
+                    this.handleSwipeGesture();
+                });
+            }
+
+            handleSwipeGesture() {
+                const currentIndex = this.pageOrder.indexOf(this.currentPage);
+                if (this.touchEndX < this.touchStartX - 50) { // Swipe Left
+                    const nextIndex = (currentIndex + 1) % this.pageOrder.length;
+                    this.navigateToPage(this.pageOrder[nextIndex]);
+                }
+
+                if (this.touchEndX > this.touchStartX + 50) { // Swipe Right
+                    const prevIndex = (currentIndex - 1 + this.pageOrder.length) % this.pageOrder.length;
+                    this.navigateToPage(this.pageOrder[prevIndex]);
+                }
+            }
+
+            setupProjectCardObserver() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                        } else {
+                            // Decrease opacity but keep it readable
+                            entry.target.style.opacity = '0.6';
+                        }
+                    });
+                }, {
+                    root: null, // relative to the viewport
+                    rootMargin: '-40% 0px -40% 0px', // trigger when card is not in the middle 40% of the screen
+                    threshold: 0
+                });
+
+                // Observe all project cards once they are rendered
+                const observeProjects = () => {
+                    const projectCards = document.querySelectorAll('.project-card');
+                    projectCards.forEach(card => observer.observe(card));
+                };
+
+                // Use a MutationObserver to re-apply the IntersectionObserver when projects are sorted/rendered
+                const projectsContainer = document.getElementById('all-projects');
+                if (projectsContainer) {
+                    const mutationObserver = new MutationObserver(observeProjects);
+                    mutationObserver.observe(projectsContainer, { childList: true });
+                }
+                const featuredProjectsContainer = document.getElementById('featured-projects');
+                if (featuredProjectsContainer) {
+                    const mutationObserver = new MutationObserver(observeProjects);
+                    mutationObserver.observe(featuredProjectsContainer, { childList: true });
+                }
+
+            }
+
+            collectProjectImages() {
+                this.projects.forEach(project => {
+                    project.files.forEach(file => {
+                        if (file.type === 'image') {
+                            this.projectImages.push(`projects/${project.folder}/${file.name}`);
+                        }
+                    });
+                });
+            }
+
+            startBackgroundSlideshow() {
+                const container = document.querySelector('.background-slideshow');
+                if (!container || this.projectImages.length === 0) return;
+
+                setInterval(() => {
+                    // Remove old images
+                    const oldImages = container.querySelectorAll('img');
+                    if (oldImages.length > 5) {
+                        oldImages.forEach(img => container.removeChild(img));
+                    }
+
+                    const img = document.createElement('img');
+                    img.src = this.projectImages[Math.floor(Math.random() * this.projectImages.length)];
+
+                    const size = Math.random() * 200 + 100; // 100px to 300px
+                    img.style.width = `${size}px`;
+                    img.style.height = 'auto';
+                    img.style.top = `${Math.random() * 100}%`;
+                    img.style.left = `${Math.random() * 100}%`;
+                    img.style.transform = `translate(-50%, -50%) rotate(${Math.random() * 90 - 45}deg)`;
+
+                    container.appendChild(img);
+
+                    // Fade in
+                    setTimeout(() => {
+                        img.style.opacity = '0.05'; // Semi-transparent
+                    }, 100);
+
+                    // Fade out and remove after some time
+                    setTimeout(() => {
+                        img.style.opacity = '0';
+                        setTimeout(() => {
+                            if (container.contains(img)) {
+                                container.removeChild(img);
+                            }
+                        }, 2000); // Wait for fade-out transition
+                    }, 8000); // 8 seconds visible
+
+                }, 4000); // New image every 4 seconds
+            }
+
+
 
             navigateToPage(page) {
                 document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
                 document.getElementById(page).classList.add('active');
                 document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-                document.querySelector(`.nav-link[data-page="${page}"]`)?.classList.add('active');
+                const activeLink = document.querySelector(`.nav-link[data-page="${page}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
                 this.currentPage = page;
                 window.scrollTo(0, 0);
             }
@@ -1433,13 +1660,18 @@
             async loadProjects() {
                 try {
                     if (typeof projects_json !== 'undefined') {
+                        // Use the embedded JSON data
                         this.projects = projects_json;
                     } else {
+                        // Fallback to fetching a file (though not needed in this case)
+                        console.log("Fetching projects.json as fallback...");
                         const response = await fetch('projects.json');
                         this.projects = await response.json();
                     }
                 } catch (error) {
                     console.error("Could not load projects:", error);
+                    const container = document.getElementById('all-projects') || document.getElementById('featured-projects');
+                    if (container) container.innerHTML = '<div class="error-message">Could not load project data.</div>';
                 }
             }
 

@@ -78,14 +78,18 @@
       {
         "name": "5.txt",
         "type": "text",
-        "content": "## 🧠 Training Details\n\n- **Dataset:** [Flickr-Faces-HQ (FFHQ)](https://github.com/NVlabs/ffhq)\n  - 70,000 high-quality face images\n  - Preprocessed to simulate passport-like degradation (e.g., compression, resizing, blur)\n\n- **Training Platform:** Google Colab\n  - Used TPU/High-RAM runtime\n  - Mixed precision training with PyTorch + CUDA\n  - Custom augmentations and passport-style degradations applied on-the-fly\n\n- **Loss Functions:**\n  - Pixel Loss (L1)\n  - Perceptual Loss (VGG-based)\n  - Adversarial Loss (GAN Discriminator)\n  - Identity Loss (optional; based on ArcFace embeddings)"
+        "content": "## 🧠 Training Details\n\n- **Dataset:** [Flickr-Faces-HQ (FFHQ)](https://github.com/NVlabs/ffhq)\n  - 70,000 high-quality face images\n  - Preprocessed to simulate passport-like degradation (e.g., compression, resizing, blur)\n\n- **Training Platform:** Google Colab\n  - Used TPU/High-RAM runtime\n  - Mixed precision training with PyTorch + CUDA\n  - Custom augmentations and passport-style degradations applied on-the-fly\n\n- **Loss Functions:**\n  - Pixel Loss (L1)\n  - Perceptual Loss (VGG-based)\n  - Adversarial Loss (GAN Discriminator)\n  - Identity Loss (optional; based on ArcFace embeddings)\n\n- **I even Tried it on a far photo of mine lol**"
       },
       {
-        "name": "6.png",
+        "name": "6.jpg",
         "type": "image"
       },
       {
-        "name": "7.png",
+        "name": "7.jpg",
+        "type": "image"
+      },
+      {
+        "name": "8.png",
         "type": "image"
       }
     ]

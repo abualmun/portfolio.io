@@ -14,3 +14,5 @@
   - Perceptual Loss (VGG-based)
   - Adversarial Loss (GAN Discriminator)
   - Identity Loss (optional; based on ArcFace embeddings)
+
+- **I even Tried it on a far photo of mine lol**

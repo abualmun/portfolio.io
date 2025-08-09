@@ -1,5 +1,4 @@
 <script>
-    // Project data is now embedded directly in the HTML
     projects_json = [
 
         {
@@ -1385,6 +1384,16 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Download Resume Button -->
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <!-- IMPORTANT: Replace 'resume.pdf' with the actual path to your resume file -->
+                    <a href="resume.pdf" class="cta-button" download
+                        style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
             </div>
         </section>
     </div>
@@ -1468,6 +1477,16 @@
                         <i class="fab fa-github"></i>
                         <h3>GitHub</h3>
                         <p>See my code in the wild. Fork, star, or follow my latest projects.</p>
+                    </a>
+                </div>
+
+                <!-- Download Resume Button -->
+                <div style="text-align: center; margin-top: 3rem;">
+                    <!-- IMPORTANT: Replace 'resume.pdf' with the actual path to your resume file -->
+                    <a href="resume.pdf" class="cta-button" download
+                        style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume</span>
                     </a>
                 </div>
             </div>
@@ -1738,17 +1757,17 @@
                 const firstImage = project.files.find(file => file.type === 'image');
 
                 card.innerHTML = `
-                    <div class="project-image">
-                        ${firstImage ?
+                <div class="project-image">
+                    ${firstImage ?
                         `<img src="projects/${project.folder}/${firstImage.name}" alt="${project.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';">` :
                         '🖼️'
                     }
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">${project.title}</h3>
-                        <p class="project-description">${project.category}</p>
-                    </div>
-                `;
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">${project.title}</h3>
+                    <p class="project-description">${project.category}</p>
+                </div>
+            `;
 
                 return card;
             }
@@ -1827,28 +1846,28 @@
             for (let i = 0; i < 50; i++) {
                 const particle = document.createElement('div');
                 particle.style.cssText = `
-                    position: absolute;
-                    width: 2px;
-                    height: 2px;
-                    background: rgba(99, 102, 241, 0.5);
-                    border-radius: 50%;
-                    left: ${Math.random() * 100}%;
-                    top: ${Math.random() * 100}%;
-                    animation: float ${3 + Math.random() * 4}s ease-in-out infinite;
-                    animation-delay: ${Math.random() * 2}s;
-                    pointer-events: none;
-                `;
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: rgba(99, 102, 241, 0.5);
+                border-radius: 50%;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation: float ${3 + Math.random() * 4}s ease-in-out infinite;
+                animation-delay: ${Math.random() * 2}s;
+                pointer-events: none;
+            `;
                 hero.appendChild(particle);
             }
         }
 
         const style = document.createElement('style');
         style.textContent = `
-            @keyframes float {
-                0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
-                50% { transform: translateY(-20px) rotate(180deg); opacity: 0.5; }
-            }
-        `;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.5; }
+        }
+    `;
         document.head.appendChild(style);
 
         window.addEventListener('load', createParticles);

@@ -1,0 +1,2 @@
+**🚍 SIKKA (سكة) – Public Transport Navigator**
+Designed and developed a cross-platform Flutter app for the *Code for Sudan* competition. SIKKA provides real-time, multi-modal navigation across Sudan’s bus and minibus networks, combining walking and transit routes in one intuitive interface.

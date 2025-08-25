@@ -1,5 +1,42 @@
 [
   {
+    "id": 0,
+    "index": 0,
+    "title": "SIKKA",
+    "category": "Frontend & Backend",
+    "date": "31.7.2025",
+    "folder": "0-SIKKA(2-31.7.2025)",
+    "files": [
+      {
+        "name": "0.jpg",
+        "type": "image"
+      },
+      {
+        "name": "1.txt",
+        "type": "text",
+        "content": "**🚍 SIKKA (سكة) – Public Transport Navigator**\nDesigned and developed a cross-platform Flutter app for the *Code for Sudan* competition. SIKKA provides real-time, multi-modal navigation across Sudan’s bus and minibus networks, combining walking and transit routes in one intuitive interface."
+      },
+      {
+        "name": "2.jpg",
+        "type": "image"
+      },
+      {
+        "name": "3.txt",
+        "type": "text",
+        "content": "**🗺️ Mapping & Routing**\nIntegrated **OpenStreetMap** and **GraphHopper** for accurate, optimized routing. Built a custom GPX → GTFS data pipeline to generate Sudan-specific transit data, enabling route visualization, stop detection, and transfer planning without relying on official datasets."
+      },
+      {
+        "name": "4.jpg",
+        "type": "image"
+      },
+      {
+        "name": "5.txt",
+        "type": "text",
+        "content": "**🎨 UI/UX & Localization**\nDelivered an Arabic-first user experience with animated branding, an interactive map, and detailed trip breakdowns. Implemented **SlidingUpPanel UI**, real-time GPS tracking, and color-coded routes for clarity, making navigation accessible and culturally relevant."
+      }
+    ]
+  },
+  {
     "id": 1,
     "index": 1,
     "title": "Reinforcement Learning",

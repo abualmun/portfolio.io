@@ -1,0 +1,3 @@
+
+**🎨 UI/UX & Localization**
+Delivered an Arabic-first user experience with animated branding, an interactive map, and detailed trip breakdowns. Implemented **SlidingUpPanel UI**, real-time GPS tracking, and color-coded routes for clarity, making navigation accessible and culturally relevant.

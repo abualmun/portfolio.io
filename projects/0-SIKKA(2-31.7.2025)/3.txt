@@ -1,0 +1,3 @@
+
+**🗺️ Mapping & Routing**
+Integrated **OpenStreetMap** and **GraphHopper** for accurate, optimized routing. Built a custom GPX → GTFS data pipeline to generate Sudan-specific transit data, enabling route visualization, stop detection, and transfer planning without relying on official datasets.
